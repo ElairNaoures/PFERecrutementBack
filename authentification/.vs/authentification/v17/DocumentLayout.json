@@ -1,0 +1,135 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\PFE\\Code\\backend\\authentification\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0F302034-BFDC-4E1C-AABB-445EB350B555}|authentification\\authentification.csproj|c:\\pfe\\code\\backend\\authentification\\authentification\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F302034-BFDC-4E1C-AABB-445EB350B555}|authentification\\authentification.csproj|solutionrelative:authentification\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F302034-BFDC-4E1C-AABB-445EB350B555}|authentification\\authentification.csproj|c:\\pfe\\code\\backend\\authentification\\authentification\\authentification.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0F302034-BFDC-4E1C-AABB-445EB350B555}|authentification\\authentification.csproj|solutionrelative:authentification\\authentification.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F302034-BFDC-4E1C-AABB-445EB350B555}|authentification\\authentification.csproj|c:\\pfe\\code\\backend\\authentification\\authentification\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F302034-BFDC-4E1C-AABB-445EB350B555}|authentification\\authentification.csproj|solutionrelative:authentification\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F302034-BFDC-4E1C-AABB-445EB350B555}|authentification\\authentification.csproj|c:\\pfe\\code\\backend\\authentification\\authentification\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F302034-BFDC-4E1C-AABB-445EB350B555}|authentification\\authentification.csproj|solutionrelative:authentification\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F302034-BFDC-4E1C-AABB-445EB350B555}|authentification\\authentification.csproj|c:\\pfe\\code\\backend\\authentification\\authentification\\models\\authenticatedresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F302034-BFDC-4E1C-AABB-445EB350B555}|authentification\\authentification.csproj|solutionrelative:authentification\\models\\authenticatedresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F302034-BFDC-4E1C-AABB-445EB350B555}|authentification\\authentification.csproj|c:\\pfe\\code\\backend\\authentification\\authentification\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F302034-BFDC-4E1C-AABB-445EB350B555}|authentification\\authentification.csproj|solutionrelative:authentification\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F302034-BFDC-4E1C-AABB-445EB350B555}|authentification\\authentification.csproj|c:\\pfe\\code\\backend\\authentification\\authentification\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0F302034-BFDC-4E1C-AABB-445EB350B555}|authentification\\authentification.csproj|solutionrelative:authentification\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthenticatedResponse.cs",
+              "DocumentMoniker": "C:\\PFE\\Code\\backend\\authentification\\authentification\\Models\\AuthenticatedResponse.cs",
+              "RelativeDocumentMoniker": "authentification\\Models\\AuthenticatedResponse.cs",
+              "ToolTip": "C:\\PFE\\Code\\backend\\authentification\\authentification\\Models\\AuthenticatedResponse.cs",
+              "RelativeToolTip": "authentification\\Models\\AuthenticatedResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T10:03:50.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\PFE\\Code\\backend\\authentification\\authentification\\Program.cs",
+              "RelativeDocumentMoniker": "authentification\\Program.cs",
+              "ToolTip": "C:\\PFE\\Code\\backend\\authentification\\authentification\\Program.cs",
+              "RelativeToolTip": "authentification\\Program.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABIAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-11T10:15:29.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\PFE\\Code\\backend\\authentification\\authentification\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "authentification\\appsettings.Development.json",
+              "ToolTip": "C:\\PFE\\Code\\backend\\authentification\\authentification\\appsettings.Development.json",
+              "RelativeToolTip": "authentification\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-11T11:26:23.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "C:\\PFE\\Code\\backend\\authentification\\authentification\\Models\\LoginModel.cs",
+              "RelativeDocumentMoniker": "authentification\\Models\\LoginModel.cs",
+              "ToolTip": "C:\\PFE\\Code\\backend\\authentification\\authentification\\Models\\LoginModel.cs",
+              "RelativeToolTip": "authentification\\Models\\LoginModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-11T10:58:42.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\PFE\\Code\\backend\\authentification\\authentification\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "authentification\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\PFE\\Code\\backend\\authentification\\authentification\\Controllers\\AuthController.cs*",
+              "RelativeToolTip": "authentification\\Controllers\\AuthController.cs*",
+              "ViewState": "AQIAACAAAAAAAAAAAAAkwCcAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-11T11:13:06.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "authentification.csproj",
+              "DocumentMoniker": "C:\\PFE\\Code\\backend\\authentification\\authentification\\authentification.csproj",
+              "RelativeDocumentMoniker": "authentification\\authentification.csproj",
+              "ToolTip": "C:\\PFE\\Code\\backend\\authentification\\authentification\\authentification.csproj",
+              "RelativeToolTip": "authentification\\authentification.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-11T10:57:05.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CustomersController.cs",
+              "DocumentMoniker": "C:\\PFE\\Code\\backend\\authentification\\authentification\\Controllers\\CustomersController.cs",
+              "RelativeDocumentMoniker": "authentification\\Controllers\\CustomersController.cs",
+              "ToolTip": "C:\\PFE\\Code\\backend\\authentification\\authentification\\Controllers\\CustomersController.cs",
+              "RelativeToolTip": "authentification\\Controllers\\CustomersController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAkAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-11T10:49:24.653Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

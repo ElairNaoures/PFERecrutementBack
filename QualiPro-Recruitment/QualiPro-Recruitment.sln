@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QualiPro-Recruitment-Web-Api", "QualiPro-Recruitment-Web-Api\QualiPro-Recruitment-Web-Api.csproj", "{2C930276-F7DE-4D74-922C-FDAAE5A50A34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QualiPro-Recruitment-Data", "QualiPro-Recruitment-Data\QualiPro-Recruitment-Data.csproj", "{33F7A0A7-4A27-45C2-8C58-9D7DBBB4BF97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C930276-F7DE-4D74-922C-FDAAE5A50A34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C930276-F7DE-4D74-922C-FDAAE5A50A34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C930276-F7DE-4D74-922C-FDAAE5A50A34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C930276-F7DE-4D74-922C-FDAAE5A50A34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33F7A0A7-4A27-45C2-8C58-9D7DBBB4BF97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33F7A0A7-4A27-45C2-8C58-9D7DBBB4BF97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33F7A0A7-4A27-45C2-8C58-9D7DBBB4BF97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33F7A0A7-4A27-45C2-8C58-9D7DBBB4BF97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72E13A22-933E-4148-B157-C85D0418D3FE}
+	EndGlobalSection
+EndGlobal

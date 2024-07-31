@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\QualiPro-Recruitment-Web-Api.props" />
+</Project>

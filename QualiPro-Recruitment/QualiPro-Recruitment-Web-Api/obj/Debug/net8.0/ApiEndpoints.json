@@ -1,0 +1,845 @@
+[
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.AccountController",
+    "Method": "AddCompte",
+    "RelativePath": "api/Account",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "compteInput",
+        "Type": "QualiPro_Recruitment_Data.Models.TabAccount",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.AccountController",
+    "Method": "GetAllComptes",
+    "RelativePath": "api/Account",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.AccountController",
+    "Method": "GetCompteId",
+    "RelativePath": "api/Account/{compteId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "compteId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.AccountController",
+    "Method": "UpdateCompte",
+    "RelativePath": "api/Account/{compteId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "compteId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "compteInput",
+        "Type": "QualiPro_Recruitment_Data.Models.TabAccount",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.AccountController",
+    "Method": "DeleteCompte",
+    "RelativePath": "api/Account/{compteId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "compteId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.AuthController",
+    "Method": "SignInCondidat",
+    "RelativePath": "api/Auth/condidat/sign-in",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "signInModel",
+        "Type": "QualiPro_Recruitment_Web_Api.Models.SignInModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.AuthController",
+    "Method": "SignUpCondidat",
+    "RelativePath": "api/Auth/condidat/sign-up",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "condidatAccountRoleModel",
+        "Type": "QualiPro_Recruitment_Web_Api.Models.CondidatAccountRoleModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.AuthController",
+    "Method": "GetUserByToken",
+    "RelativePath": "api/Auth/get-user-from-token",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tokenModel",
+        "Type": "QualiPro_Recruitment_Web_Api.Models.TokenModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.AuthController",
+    "Method": "SignIn",
+    "RelativePath": "api/Auth/sign-in",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "signInModel",
+        "Type": "QualiPro_Recruitment_Web_Api.Models.SignInModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.AuthController",
+    "Method": "SignUp",
+    "RelativePath": "api/Auth/sign-up",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userAccountRoleModel",
+        "Type": "QualiPro_Recruitment_Web_Api.Models.UserAccountRoleModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.CondidatController",
+    "Method": "GetAllCondidats",
+    "RelativePath": "api/Condidat",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.CondidatController",
+    "Method": "AddCondidat",
+    "RelativePath": "api/Condidat",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "condidatInput",
+        "Type": "QualiPro_Recruitment_Web_Api.DTOs.CondidatDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.CondidatController",
+    "Method": "GetCondidatId",
+    "RelativePath": "api/Condidat/{condidatId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "condidatId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.CondidatController",
+    "Method": "UpdateCondidat",
+    "RelativePath": "api/Condidat/{condidatId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "condidatId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "condidatInput",
+        "Type": "QualiPro_Recruitment_Data.Models.TabCondidat",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.CondidatController",
+    "Method": "DeleteCondidat",
+    "RelativePath": "api/Condidat/{condidatId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "condidatId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.ContractTypeController",
+    "Method": "AddContract",
+    "RelativePath": "api/ContractType",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contractInput",
+        "Type": "QualiPro_Recruitment_Web_Api.DTOs.contractTypeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.ContractTypeController",
+    "Method": "GetAllContracts",
+    "RelativePath": "api/ContractType",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.ContractTypeController",
+    "Method": "GetContractId",
+    "RelativePath": "api/ContractType/{contractId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contractId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.ContractTypeController",
+    "Method": "UpdateContract",
+    "RelativePath": "api/ContractType/{contractId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contractId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "contractInput",
+        "Type": "QualiPro_Recruitment_Data.Models.TabContractType",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.ContractTypeController",
+    "Method": "DeleteContract",
+    "RelativePath": "api/ContractType/{contractId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contractId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.EducationController",
+    "Method": "AddEducation",
+    "RelativePath": "api/Education",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "educationInput",
+        "Type": "QualiPro_Recruitment_Web_Api.DTOs.EducationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.EducationController",
+    "Method": "GetAllEducations",
+    "RelativePath": "api/Education",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.EducationController",
+    "Method": "GetEducationId",
+    "RelativePath": "api/Education/{educationId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "educationId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.EducationController",
+    "Method": "UpdateEducation",
+    "RelativePath": "api/Education/{educationId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "educationId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "educationInput",
+        "Type": "QualiPro_Recruitment_Data.Models.TabEducation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.EducationController",
+    "Method": "DeleteEducation",
+    "RelativePath": "api/Education/{educationId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "educationId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.EducationController",
+    "Method": "GetEducationsByCondidatId",
+    "RelativePath": "api/Education/condidat/{condidatId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "condidatId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.JobController",
+    "Method": "AddJob",
+    "RelativePath": "api/Job",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jobInput",
+        "Type": "QualiPro_Recruitment_Web_Api.DTOs.JobDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.JobController",
+    "Method": "GetAllJobs",
+    "RelativePath": "api/Job",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.JobController",
+    "Method": "GetJobId",
+    "RelativePath": "api/Job/{jobId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jobId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.JobController",
+    "Method": "UpdateJob",
+    "RelativePath": "api/Job/{jobId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jobId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "jobInput",
+        "Type": "QualiPro_Recruitment_Data.Models.TabJob",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.JobController",
+    "Method": "DeleteJob",
+    "RelativePath": "api/Job/{jobId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jobId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.ModuleController",
+    "Method": "AddModule",
+    "RelativePath": "api/Module",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "moduleInput",
+        "Type": "QualiPro_Recruitment_Data.Models.TabModule",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.ModuleController",
+    "Method": "GetAllModules",
+    "RelativePath": "api/Module",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.ModuleController",
+    "Method": "GetModuleId",
+    "RelativePath": "api/Module/{moduleId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "moduleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.ModuleController",
+    "Method": "UpdateModule",
+    "RelativePath": "api/Module/{moduleId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "moduleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "moduleInput",
+        "Type": "QualiPro_Recruitment_Data.Models.TabModule",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.ModuleController",
+    "Method": "DeleteModule",
+    "RelativePath": "api/Module/{moduleId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "moduleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.ProfessionalExperienceController",
+    "Method": "AddProfessionalExperience",
+    "RelativePath": "api/ProfessionalExperience",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "professionalExperienceInput",
+        "Type": "QualiPro_Recruitment_Data.Models.ProfessionalExperience",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.ProfessionalExperienceController",
+    "Method": "GetAllProfessionalExperiences",
+    "RelativePath": "api/ProfessionalExperience",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.ProfessionalExperienceController",
+    "Method": "GetProfessionalExperienceId",
+    "RelativePath": "api/ProfessionalExperience/{professionalExperienceId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "professionalExperienceId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.ProfessionalExperienceController",
+    "Method": "UpdateProfessionalExperience",
+    "RelativePath": "api/ProfessionalExperience/{professionalExperienceId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "professionalExperienceId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "professionalExperienceInput",
+        "Type": "QualiPro_Recruitment_Data.Models.ProfessionalExperience",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.ProfessionalExperienceController",
+    "Method": "DeleteProfessionalExperience",
+    "RelativePath": "api/ProfessionalExperience/{professionalExperienceId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "professionalExperienceId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.ProfessionalExperienceController",
+    "Method": "GetProfessionalExperiencesByCondidatId",
+    "RelativePath": "api/ProfessionalExperience/condidat/{condidatId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "condidatId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.RoleController",
+    "Method": "AddRole",
+    "RelativePath": "api/Role",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleInput",
+        "Type": "QualiPro_Recruitment_Data.Models.TabRole",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.RoleController",
+    "Method": "GetAllRoles",
+    "RelativePath": "api/Role",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.RoleController",
+    "Method": "GetRoleId",
+    "RelativePath": "api/Role/{roleId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.RoleController",
+    "Method": "UpdateRole",
+    "RelativePath": "api/Role/{roleId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "userInput",
+        "Type": "QualiPro_Recruitment_Data.Models.TabRole",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.RoleController",
+    "Method": "DeleteRole",
+    "RelativePath": "api/Role/{roleId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.UserController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/User",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.UserController",
+    "Method": "AddUser",
+    "RelativePath": "api/User",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userInput",
+        "Type": "QualiPro_Recruitment_Web_Api.DTOs.UserDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.UserController",
+    "Method": "GetUserId",
+    "RelativePath": "api/User/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.UserController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/User/{userId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "userInput",
+        "Type": "QualiPro_Recruitment_Data.Models.TabUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.UserController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/User/{userId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[QualiPro_Recruitment_Web_Api.WeatherForecast, QualiPro-Recruitment-Web-Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
