@@ -19,6 +19,12 @@ public partial class TabUser
 
     public int? RoleId { get; set; }
 
+    public string? ImageFileName { get; set; }
+
+    public bool? Deleted { get; set; }
+
+    public virtual ICollection<Notification> Notifications { get; set; } = new List<Notification>();
+
     public virtual TabRole? Role { get; set; }
 
     public virtual ICollection<TabAccount> TabAccounts { get; set; } = new List<TabAccount>();

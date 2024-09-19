@@ -12,8 +12,8 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.ContraTypeRepo
         Task<TabContractType> GetContractById(int contractId);
 
         Task<TabContractType> UpdateContract(int contractId, TabContractType contractInput);
-        Task<TabContractType> DeleteContract(int contractId);
-
+        //  Task<TabContractType> DeleteContract(int contractId);
+        Task<bool> DeleteContract(int contractId);
 
     }
 }

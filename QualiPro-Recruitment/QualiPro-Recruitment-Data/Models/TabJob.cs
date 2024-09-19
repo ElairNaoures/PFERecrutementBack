@@ -25,7 +25,17 @@ public partial class TabJob
 
     public DateTime? CreatedAt { get; set; }
 
+    public int? JobProfileId { get; set; }
+
+    public bool? Deleted { get; set; }
+
     public virtual TabContractType? ContractType { get; set; }
+
+    public virtual TabProfileJob? JobProfile { get; set; }
+
+    public virtual ICollection<TabJobApplication> TabJobApplications { get; set; } = new List<TabJobApplication>();
+
+    public virtual ICollection<TabJobSkill> TabJobSkills { get; set; } = new List<TabJobSkill>();
 
     public virtual TabUser? User { get; set; }
 }

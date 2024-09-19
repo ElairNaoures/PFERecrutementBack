@@ -2,8 +2,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Query.Internal;
 using Microsoft.IdentityModel.Tokens;
+using QualiPro_Recruitment_Web_Api.DTOs;
 using QualiPro_Recruitment_Web_Api.Models;
 using QualiPro_Recruitment_Web_Api.Repositories.AuthRepo;
+using QualiPro_Recruitment_Web_Api.Repositories.UserRepo;
 using QualiPro_Recruitment_Web_Api.Services;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -16,12 +18,16 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IAuthRepository _authRepository;
+        private readonly IUserRepository _userRepository;
 
 
-        public AuthController(IAuthRepository authRepository)
+
+        public AuthController(IAuthRepository authRepository, IUserRepository userRepository)
         {
             _authRepository = authRepository;
+            _userRepository = userRepository;
         }
+
         [HttpPost("sign-in")]
         public async Task<IActionResult> SignIn(SignInModel signInModel)
         {
@@ -48,6 +54,33 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        //[HttpPost("add-user")]
+
+        //public async Task<IActionResult> AddUser(UserAccountRoleModel userAccountRoleModel)
+        //{
+        //    try
+        //    {
+        //        if (userAccountRoleModel != null && userAccountRoleModel.Email != null && userAccountRoleModel.Password != null)
+        //        {
+        //            AuthModel result = await _authRepository.SignUp(userAccountRoleModel);
+
+        //            if (result.Success == true && result.Success.Value && result.AccessToken != null && result.UserInfo != null)
+        //            {
+        //                return Ok(result);
+        //            }
+        //            else
+        //            {
+        //                return BadRequest(result);
+        //            }
+        //        }
+        //        return BadRequest();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest(ex.Message);
+        //    }
+        //}
 
         [HttpPost("sign-up")]
 
@@ -170,6 +203,21 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
                 return BadRequest(ex);
             };
         }
+        [HttpPost("get-condidat-from-token")]
+        public async Task<IActionResult> GetCondidatByToken(TokenModel tokenModel)
+        {
+            try
+            {
+                var CondidatAccountRoleModel = new CondidatAccountRoleModel();
+                CondidatAccountRoleModel = await _authRepository.GetCondidatByToken(tokenModel);
+
+                return Ok(CondidatAccountRoleModel);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            };
+        }
 
         //[HttpGet("condidat/{id}")]
         //public async Task<IActionResult> GetCondidatById(int id)
@@ -217,7 +265,40 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
         //    }
         //    return Ok(new { Email = email });
         //}
+        [HttpGet("user/{userId}")]
+        public async Task<IActionResult> GetUserInfo(int userId)
+        {
+            try
+            {
+                var user = await _userRepository.GetUserById(userId);
+                if (user != null)
+                {
+                    // Map the user to UserDTO
+                    var userDto = new UserDTO
+                    {
+                        Id = user.Id,
+                        FirstName = user.FirstName,
+                        LastName = user.LastName,
+                        //Country = user.Country,
+                        //PhoneNumber = user.PhoneNumber,
+                        //Birthdate = user.Birthdate,
+                        //RoleId = user.RoleId,
+                        //RoleName = user.RoleName,
+                        //ImageFileName = user.ImageFileName
+                    };
+
+                    return Ok(userDto);
+                }
+                return NotFound("User not found.");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
     }
 
-
 }
+
+

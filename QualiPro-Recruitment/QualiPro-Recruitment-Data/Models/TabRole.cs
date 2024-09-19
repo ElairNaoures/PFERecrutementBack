@@ -9,6 +9,8 @@ public partial class TabRole
 
     public string? RoleName { get; set; }
 
+    public bool? Deleted { get; set; }
+
     public virtual ICollection<TabModuleRole> TabModuleRoles { get; set; } = new List<TabModuleRole>();
 
     public virtual ICollection<TabUser> TabUsers { get; set; } = new List<TabUser>();

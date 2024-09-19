@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using QualiPro_Recruitment_Data.Data;
 using QualiPro_Recruitment_Data.Models;
 using QualiPro_Recruitment_Web_Api.DTOs;
+using System.Diagnostics.Contracts;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace QualiPro_Recruitment_Web_Api.Repositories.JobRepo
@@ -22,25 +23,19 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.JobRepo
 
         public async Task<TabJob> AddJob(JobDto jobInput)
         {
-            TabJob job = new TabJob()
+            TabJob job = new TabJob
             {
-
                 Title = jobInput.Title,
                 Description = jobInput.Description,
-                //UserId = jobInput.UserId,
                 YearsOfExperience = jobInput.YearsOfExperience,
                 Languages = jobInput.Languages,
                 EducationLevel = jobInput.EducationLevel,
                 ContractTypeId = jobInput.ContractTypeId,
                 ExpirationDate = jobInput.ExpirationDate,
                 CreatedAt = DateTime.Now,
-                //ContractTypeId = jobInput.ContractTypeId,
                 UserId = jobInput.UserId,
-               
-
-
+                JobProfileId = jobInput.JobProfileId
             };
-
 
             await _qualiProContext.AddAsync(job);
             await _qualiProContext.SaveChangesAsync();
@@ -50,15 +45,24 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.JobRepo
 
         public async Task<List<TabJob>> GetAllJobs()
         {
-            var ListJobs = await _qualiProContext.TabJobs.OrderByDescending(p=>p.Id).ToListAsync();
+            var ListJobs = await _qualiProContext.TabJobs
+                .Where(p => p.Deleted == false || p.Deleted == null)
+                .OrderByDescending(p => p.Id)
+                .ToListAsync();
+
             return ListJobs;
         }
 
         public async Task<TabJob> GetJobById(int jobId)
         {
-            var Job = await _qualiProContext.TabJobs.FirstOrDefaultAsync(p => p.Id == jobId);
+            var Job = await _qualiProContext.TabJobs
+                .FirstOrDefaultAsync(p => p.Id == jobId && (p.Deleted == false || p.Deleted == null));
+
             return Job;
         }
+
+
+       
 
         public async Task<TabJob> UpdateJob(int jobId, TabJob jobInput)
         {
@@ -75,6 +79,7 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.JobRepo
             job.ContractTypeId = jobInput.ContractTypeId;
             job.ExpirationDate = jobInput.ExpirationDate;
             job.CreatedAt = DateTime.Now;
+            job.JobProfileId = jobInput.JobProfileId;
 
 
 
@@ -84,17 +89,44 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.JobRepo
             await _qualiProContext.SaveChangesAsync();
             return job;
         }
-
-        public async Task<TabJob> DeleteJob(int jobId)
+        public async Task<bool> DeleteJob(int jobId)
         {
             var job = await _qualiProContext.TabJobs.FindAsync(jobId);
             if (job == null)
             {
-                return null;
+                return false;
             }
-            _qualiProContext.TabJobs.Remove(job);
+
+            job.Deleted = true;
+
             await _qualiProContext.SaveChangesAsync();
-            return job;
+            return true;
+        }
+
+        public async Task<List<TabJob>> GetJobsByLetter(string letter)
+        {
+            return await _qualiProContext.TabJobs
+                .Where(j => j.Title.StartsWith(letter) && (j.Deleted == false || j.Deleted == null))
+                .ToListAsync();
+        }
+
+
+        public async Task<IEnumerable<TabJob>> GetJobsByProfile(string profileName)
+        {
+            return await _qualiProContext.TabJobs
+                .Include(job => job.JobProfile)
+                .Where(job => job.JobProfile.ProfileName == profileName && (job.Deleted == false || job.Deleted == null))
+                .ToListAsync();
+        }
+
+
+
+
+        public IEnumerable<TabJob> GetJobsByProfileId(int profileId)
+        {
+            return _qualiProContext.TabJobs
+                .Where(job => job.JobProfileId == profileId && (job.Deleted == false || job.Deleted == null))
+                .ToList();
         }
 
 

@@ -1,4 +1,5 @@
-﻿using QualiPro_Recruitment_Data.Models;
+﻿using Microsoft.AspNetCore.Mvc;
+using QualiPro_Recruitment_Data.Models;
 using QualiPro_Recruitment_Web_Api.DTOs;
 
 namespace QualiPro_Recruitment_Web_Api.Repositories.JobRepo
@@ -10,6 +11,10 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.JobRepo
 
         Task<TabJob> GetJobById(int jobId);
         Task<TabJob> UpdateJob(int jobId, TabJob jobInput);
-        Task<TabJob> DeleteJob(int jobId);
+        Task<bool> DeleteJob(int jobId);
+        Task<List<TabJob>> GetJobsByLetter(string letter);
+
+        Task<IEnumerable<TabJob>> GetJobsByProfile(string profileName);
+        IEnumerable<TabJob> GetJobsByProfileId(int profileId);
     }
 }

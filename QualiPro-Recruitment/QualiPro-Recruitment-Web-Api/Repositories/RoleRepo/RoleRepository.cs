@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
 using QualiPro_Recruitment_Data.Data;
 using QualiPro_Recruitment_Data.Models;
 
@@ -30,13 +31,13 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.RoleRepo
 
         public async Task<List<TabRole>> GetAllRoles()
         {
-            var ListRoles = await _qualiProContext.TabRoles.ToListAsync();
+            var ListRoles = await _qualiProContext.TabRoles.OrderByDescending(p => p.Id).Where(p => p.Deleted == false || p.Deleted == null).ToListAsync();
             return ListRoles;
         }
 
         public async Task<TabRole> GetRoleById(int roleId)
         {
-            var Role = await _qualiProContext.TabRoles.FirstOrDefaultAsync(p => p.Id == roleId);
+            var Role = await _qualiProContext.TabRoles.FirstOrDefaultAsync(p => p.Id == roleId && (p.Deleted == false || p.Deleted == null));
             return Role;
         }
 
@@ -52,16 +53,14 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.RoleRepo
             return role;
         }
 
-        public async Task<TabRole> DeleteRole(int roleId)
+        public async Task<bool> DeleteRole(int roleId)
         {
             var role = await _qualiProContext.TabRoles.FindAsync(roleId);
             if (role == null)
-            {
-                return null;
-            }
-            _qualiProContext.TabRoles.Remove(role);
+                return false;
+            role.Deleted = true;
             await _qualiProContext.SaveChangesAsync();
-            return role;
+            return true;
         }
 
     }

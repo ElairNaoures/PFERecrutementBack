@@ -11,5 +11,7 @@ public partial class TabContractType
 
     public DateTime? CreatedAt { get; set; }
 
+    public bool? Deleted { get; set; }
+
     public virtual ICollection<TabJob> TabJobs { get; set; } = new List<TabJob>();
 }

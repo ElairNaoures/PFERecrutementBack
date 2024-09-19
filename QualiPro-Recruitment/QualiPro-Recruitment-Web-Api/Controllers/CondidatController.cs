@@ -1,11 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using QualiPro_Recruitment_Data.Models;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.IO;
+using System.Threading.Tasks;
 using QualiPro_Recruitment_Web_Api.DTOs;
-using QualiPro_Recruitment_Web_Api.Models;
-using QualiPro_Recruitment_Web_Api.Repositories.AuthRepo;
-using QualiPro_Recruitment_Web_Api.Repositories.CompteRepo;
+using QualiPro_Recruitment_Web_Api.Repositories;
 using QualiPro_Recruitment_Web_Api.Repositories.CondidatRepo;
-using QualiPro_Recruitment_Web_Api.Repositories.JobRepo;
 
 namespace QualiPro_Recruitment_Web_Api.Controllers
 {
@@ -13,75 +13,95 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
     [ApiController]
     public class CondidatController : ControllerBase
     {
-
         private readonly ICondidatRepository _condidatRepository;
-        private readonly IAuthRepository _authRepository;
 
-
-
-        public CondidatController(ICondidatRepository condidatRepository, IAuthRepository authRepository)
+        public CondidatController(ICondidatRepository condidatRepository)
         {
             _condidatRepository = condidatRepository;
-            _authRepository = authRepository;
         }
-
-
 
         [HttpGet]
-        public async Task<IActionResult> GetAllCondidats()
+        public async Task<IEnumerable<CondidatDto>> GetAllCondidats()
         {
-            var ListCondidats = await _condidatRepository.GetAllCondidats();
-            return Ok(ListCondidats);
-
+            return await _condidatRepository.GetAllCondidatsAsync();
         }
-        [HttpGet("{condidatId}")]
-        public async Task<IActionResult> GetCondidatId(int condidatId)
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<CondidatDto>> GetCondidatById(int id)
         {
-            var Condidat = await _condidatRepository.GetCondidatById(condidatId);
-            return Ok(Condidat);
+            var condidat = await _condidatRepository.GetCondidatByIdAsync(id);
+            if (condidat == null)
+            {
+                return NotFound();
+            }
 
-
+            return condidat;
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddCondidat([FromBody] CondidatDto condidatInput)
+        public async Task<ActionResult<CondidatDto>> CreateCondidat([FromForm] CondidatDto condidatDto, IFormFile imageFile, IFormFile cvFile)
         {
-
-            TabCondidat Condidat = await _condidatRepository.AddCondidat(condidatInput);
-            return Ok(Condidat);
-        }
-
-        [HttpPut("{condidatId}")]
-        public async Task<IActionResult> UpdateCondidat([FromRoute] int condidatId, [FromBody] TabCondidat condidatInput)
-        {
-            var Condidat = await _condidatRepository.UpdateCondidat(condidatId, condidatInput);
-            return Ok(Condidat);
-
-
-        }
-
-
-        [HttpDelete("{condidatId}")]
-        public async Task<IActionResult> DeleteCondidat(int condidatId)
-        {
-            var deletedCondidat = await _condidatRepository.DeleteCondidat(condidatId);
-            if (deletedCondidat == null)
+            if (imageFile != null)
             {
-                return NotFound("condidat not found");
+                var imageFilePath = Path.Combine("UploadedImages", imageFile.FileName);
+                using (var stream = new FileStream(imageFilePath, FileMode.Create))
+                {
+                    await imageFile.CopyToAsync(stream);
+                }
+                condidatDto.ImageFileName = imageFile.FileName;
             }
-            return Ok("condidat deleted successfully");
+
+            if (cvFile != null)
+            {
+                var cvFilePath = Path.Combine("UploadedCVs", cvFile.FileName);
+                using (var stream = new FileStream(cvFilePath, FileMode.Create))
+                {
+                    await cvFile.CopyToAsync(stream);
+                }
+                condidatDto.CvFileName = cvFile.FileName;
+            }
+
+            var createdCondidat = await _condidatRepository.CreateCondidatAsync(condidatDto);
+            return CreatedAtAction(nameof(GetCondidatById), new { id = createdCondidat.Id }, createdCondidat);
         }
 
-        //[HttpGet("{condidatId}/email")]
-        //public async Task<IActionResult> GetEmailByCondidatId(int condidatId)
-        //{
-        //    var email = await _authRepository.GetEmailByCondidatId(condidatId);
-        //    if (email == null)
-        //    {
-        //        return NotFound("Email not found.");
-        //    }
-        //    return Ok(new { Email = email });
-        //}
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateCondidat(int id, [FromForm] CondidatDto condidatDto, IFormFile imageFile, IFormFile cvFile)
+        {
+            if (id != condidatDto.Id)
+            {
+                return BadRequest();
+            }
 
-    } 
+            if (imageFile != null)
+            {
+                var imageFilePath = Path.Combine("UploadedImages", imageFile.FileName);
+                using (var stream = new FileStream(imageFilePath, FileMode.Create))
+                {
+                    await imageFile.CopyToAsync(stream);
+                }
+                condidatDto.ImageFileName = imageFile.FileName;
+            }
+
+            if (cvFile != null)
+            {
+                var cvFilePath = Path.Combine("UploadedCVs", cvFile.FileName);
+                using (var stream = new FileStream(cvFilePath, FileMode.Create))
+                {
+                    await cvFile.CopyToAsync(stream);
+                }
+                condidatDto.CvFileName = cvFile.FileName;
+            }
+
+            await _condidatRepository.UpdateCondidatAsync(condidatDto);
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteCondidat(int id)
+        {
+            await _condidatRepository.DeleteCondidatAsync(id);
+            return NoContent();
+        }
+    }
 }

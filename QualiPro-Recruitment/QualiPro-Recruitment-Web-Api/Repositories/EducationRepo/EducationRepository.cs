@@ -41,7 +41,7 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.EducationRepo
 
         public async Task<List<TabEducation>> GetAllEducations()
         {
-            var ListEducations = await _qualiProContext.TabEducations.ToListAsync();
+            var ListEducations = await _qualiProContext.TabEducations.OrderByDescending(p => p.Id).ToListAsync();
             return ListEducations;
         }
 
@@ -61,7 +61,7 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.EducationRepo
             education.StartDate = educationInput.StartDate;
                 education.EndDate = educationInput.EndDate;
             education.Description = educationInput.Description;
-            education.CondidatId = educationInput.CondidatId ;
+            //education.CondidatId = educationInput.CondidatId ;
 
 
             await _qualiProContext.SaveChangesAsync();
@@ -79,12 +79,15 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.EducationRepo
             await _qualiProContext.SaveChangesAsync();
             return education;
         }
+      
+
         public async Task<List<TabEducation>> GetEducationsByCondidatId(int condidatId)
         {
             return await _qualiProContext.TabEducations
                                          .Where(e => e.CondidatId == condidatId)
                                          .ToListAsync();
         }
+
     }
 }
 

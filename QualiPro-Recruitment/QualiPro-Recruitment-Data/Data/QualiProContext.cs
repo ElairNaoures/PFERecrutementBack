@@ -18,6 +18,8 @@ public partial class QualiProContext : DbContext
 
     public virtual DbSet<NewTabContractType> NewTabContractTypes { get; set; }
 
+    public virtual DbSet<Notification> Notifications { get; set; }
+
     public virtual DbSet<ProfessionalExperience> ProfessionalExperiences { get; set; }
 
     public virtual DbSet<TabAccount> TabAccounts { get; set; }
@@ -32,9 +34,23 @@ public partial class QualiProContext : DbContext
 
     public virtual DbSet<TabJob> TabJobs { get; set; }
 
+    public virtual DbSet<TabJobApplication> TabJobApplications { get; set; }
+
+    public virtual DbSet<TabJobSkill> TabJobSkills { get; set; }
+
     public virtual DbSet<TabModule> TabModules { get; set; }
 
     public virtual DbSet<TabModuleRole> TabModuleRoles { get; set; }
+
+    public virtual DbSet<TabProfileJob> TabProfileJobs { get; set; }
+
+    public virtual DbSet<TabQuestion> TabQuestions { get; set; }
+
+    public virtual DbSet<TabQuestionOption> TabQuestionOptions { get; set; }
+
+    public virtual DbSet<TabQuiz> TabQuizzes { get; set; }
+
+    public virtual DbSet<TabQuizEvaluation> TabQuizEvaluations { get; set; }
 
     public virtual DbSet<TabRole> TabRoles { get; set; }
 
@@ -63,6 +79,27 @@ public partial class QualiProContext : DbContext
             entity.Property(e => e.Designation)
                 .HasMaxLength(255)
                 .HasColumnName("designation");
+        });
+
+        modelBuilder.Entity<Notification>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Notifica__3214EC0768563EB8");
+
+            entity.ToTable("Notification");
+
+            entity.Property(e => e.CreatedAt)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+
+            entity.HasOne(d => d.Condidat).WithMany(p => p.Notifications)
+                .HasForeignKey(d => d.CondidatId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Notification_Condidat");
+
+            entity.HasOne(d => d.User).WithMany(p => p.Notifications)
+                .HasForeignKey(d => d.UserId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Notification_User");
         });
 
         modelBuilder.Entity<ProfessionalExperience>(entity =>
@@ -155,10 +192,19 @@ public partial class QualiProContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("country");
+            entity.Property(e => e.CvFileName)
+                .HasMaxLength(255)
+                .HasColumnName("cv_file_name");
+            entity.Property(e => e.Deleted)
+                .HasDefaultValue(false)
+                .HasColumnName("deleted");
             entity.Property(e => e.FirstName)
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("first_name");
+            entity.Property(e => e.ImageFileName)
+                .HasMaxLength(255)
+                .HasColumnName("image_file_name");
             entity.Property(e => e.LastName)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -184,6 +230,9 @@ public partial class QualiProContext : DbContext
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime")
                 .HasColumnName("created_at");
+            entity.Property(e => e.Deleted)
+                .HasDefaultValue(false)
+                .HasColumnName("deleted");
             entity.Property(e => e.Designation)
                 .HasMaxLength(255)
                 .HasColumnName("designation");
@@ -228,6 +277,9 @@ public partial class QualiProContext : DbContext
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime")
                 .HasColumnName("created_at");
+            entity.Property(e => e.Deleted)
+                .HasDefaultValue(false)
+                .HasColumnName("deleted");
             entity.Property(e => e.Description).HasColumnName("description");
             entity.Property(e => e.EducationLevel)
                 .HasMaxLength(255)
@@ -235,6 +287,7 @@ public partial class QualiProContext : DbContext
             entity.Property(e => e.ExpirationDate)
                 .HasColumnType("datetime")
                 .HasColumnName("expiration_date");
+            entity.Property(e => e.JobProfileId).HasColumnName("job_profile_id");
             entity.Property(e => e.Languages)
                 .HasMaxLength(255)
                 .HasColumnName("languages");
@@ -250,9 +303,61 @@ public partial class QualiProContext : DbContext
                 .HasForeignKey(d => d.ContractTypeId)
                 .HasConstraintName("FK__tab_job__contrac__403A8C7D");
 
+            entity.HasOne(d => d.JobProfile).WithMany(p => p.TabJobs)
+                .HasForeignKey(d => d.JobProfileId)
+                .HasConstraintName("FK_tab_job_tab_profile_job");
+
             entity.HasOne(d => d.User).WithMany(p => p.TabJobs)
                 .HasForeignKey(d => d.UserId)
                 .HasConstraintName("FK__tab_job__user_id__3F466844");
+        });
+
+        modelBuilder.Entity<TabJobApplication>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__tab_job___3213E83FA4E70877");
+
+            entity.ToTable("tab_job_application");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.CondidatId).HasColumnName("condidat_id");
+            entity.Property(e => e.Deleted)
+                .HasDefaultValue(false)
+                .HasColumnName("deleted");
+            entity.Property(e => e.HeadToHeadInterviewNote).HasColumnName("head_to_head_interview_note");
+            entity.Property(e => e.JobId).HasColumnName("job_id");
+            entity.Property(e => e.MeetingDate)
+                .HasColumnType("datetime")
+                .HasColumnName("meeting_date");
+            entity.Property(e => e.Score).HasColumnName("score");
+
+            entity.HasOne(d => d.Condidat).WithMany(p => p.TabJobApplications)
+                .HasForeignKey(d => d.CondidatId)
+                .HasConstraintName("FK__tab_job_a__condi__75A278F5");
+
+            entity.HasOne(d => d.Job).WithMany(p => p.TabJobApplications)
+                .HasForeignKey(d => d.JobId)
+                .HasConstraintName("FK__tab_job_a__job_i__76969D2E");
+        });
+
+        modelBuilder.Entity<TabJobSkill>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__tab_job___3213E83F45F446EC");
+
+            entity.ToTable("tab_job_skills");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.JobId).HasColumnName("job_id");
+            entity.Property(e => e.SkillsId).HasColumnName("skills_id");
+
+            entity.HasOne(d => d.Job).WithMany(p => p.TabJobSkills)
+                .HasForeignKey(d => d.JobId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_tab_job_skills_job");
+
+            entity.HasOne(d => d.Skills).WithMany(p => p.TabJobSkills)
+                .HasForeignKey(d => d.SkillsId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_tab_job_skills_skill");
         });
 
         modelBuilder.Entity<TabModule>(entity =>
@@ -292,6 +397,111 @@ public partial class QualiProContext : DbContext
                 .HasConstraintName("FK__tab_modul__role___2F10007B");
         });
 
+        modelBuilder.Entity<TabProfileJob>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__tab_prof__3213E83FF1F20C60");
+
+            entity.ToTable("tab_profile_job");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.ProfileName)
+                .HasMaxLength(255)
+                .HasColumnName("profile_name");
+            entity.Property(e => e.QuizId).HasColumnName("quiz_id");
+
+            entity.HasOne(d => d.Quiz).WithMany(p => p.TabProfileJobs)
+                .HasForeignKey(d => d.QuizId)
+                .HasConstraintName("FK__tab_profi__quiz___71D1E811");
+        });
+
+        modelBuilder.Entity<TabQuestion>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__tab_ques__3213E83F98EE8025");
+
+            entity.ToTable("tab_question");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Coefficient).HasColumnName("coefficient");
+            entity.Property(e => e.CorrectQuestionOptionId).HasColumnName("correct_question_option_id");
+            entity.Property(e => e.Deleted)
+                .HasDefaultValue(false)
+                .HasColumnName("deleted");
+            entity.Property(e => e.QuestionName)
+                .HasMaxLength(255)
+                .HasColumnName("question_name");
+            entity.Property(e => e.QuizId).HasColumnName("quiz_id");
+
+            entity.HasOne(d => d.CorrectQuestionOption).WithMany(p => p.TabQuestions)
+                .HasForeignKey(d => d.CorrectQuestionOptionId)
+                .HasConstraintName("FK_tab_question_tab_question_option");
+
+            entity.HasOne(d => d.Quiz).WithMany(p => p.TabQuestions)
+                .HasForeignKey(d => d.QuizId)
+                .HasConstraintName("FK__tab_quest__quiz___797309D9");
+        });
+
+        modelBuilder.Entity<TabQuestionOption>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__tab_ques__3213E83FAB5CEBE8");
+
+            entity.ToTable("tab_question_option");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.QuestionId).HasColumnName("question_id");
+            entity.Property(e => e.QuestionOptionName)
+                .HasMaxLength(255)
+                .HasColumnName("question_option_name");
+
+            entity.HasOne(d => d.Question).WithMany(p => p.TabQuestionOptions)
+                .HasForeignKey(d => d.QuestionId)
+                .HasConstraintName("FK__tab_quest__quest__7C4F7684");
+        });
+
+        modelBuilder.Entity<TabQuiz>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__tab_quiz__3213E83FF888BBE0");
+
+            entity.ToTable("tab_quiz");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Deleted)
+                .HasDefaultValue(false)
+                .HasColumnName("deleted");
+            entity.Property(e => e.QuizName)
+                .HasMaxLength(255)
+                .HasColumnName("quiz_name");
+        });
+
+        modelBuilder.Entity<TabQuizEvaluation>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__tab_quiz__3213E83F0FE27FD8");
+
+            entity.ToTable("tab_quiz_evaluation");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.IdReponse).HasColumnName("id_reponse");
+            entity.Property(e => e.JobApplicationId).HasColumnName("job_application_id");
+            entity.Property(e => e.QuestionId).HasColumnName("question_id");
+            entity.Property(e => e.QuestionOptionId).HasColumnName("question_option_id");
+            entity.Property(e => e.QuizId).HasColumnName("quiz_id");
+
+            entity.HasOne(d => d.JobApplication).WithMany(p => p.TabQuizEvaluations)
+                .HasForeignKey(d => d.JobApplicationId)
+                .HasConstraintName("FK__tab_quiz___job_a__00200768");
+
+            entity.HasOne(d => d.Question).WithMany(p => p.TabQuizEvaluations)
+                .HasForeignKey(d => d.QuestionId)
+                .HasConstraintName("FK__tab_quiz___quest__02084FDA");
+
+            entity.HasOne(d => d.QuestionOption).WithMany(p => p.TabQuizEvaluations)
+                .HasForeignKey(d => d.QuestionOptionId)
+                .HasConstraintName("FK__tab_quiz___quest__02FC7413");
+
+            entity.HasOne(d => d.Quiz).WithMany(p => p.TabQuizEvaluations)
+                .HasForeignKey(d => d.QuizId)
+                .HasConstraintName("FK__tab_quiz___quiz___01142BA1");
+        });
+
         modelBuilder.Entity<TabRole>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__tab_role__3213E83FCEA8784A");
@@ -299,6 +509,9 @@ public partial class QualiProContext : DbContext
             entity.ToTable("tab_role");
 
             entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Deleted)
+                .HasDefaultValue(false)
+                .HasColumnName("deleted");
             entity.Property(e => e.RoleName)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -334,10 +547,16 @@ public partial class QualiProContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("country");
+            entity.Property(e => e.Deleted)
+                .HasDefaultValue(false)
+                .HasColumnName("deleted");
             entity.Property(e => e.FirstName)
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("first_name");
+            entity.Property(e => e.ImageFileName)
+                .HasMaxLength(255)
+                .HasColumnName("image_file_name");
             entity.Property(e => e.LastName)
                 .HasMaxLength(50)
                 .IsUnicode(false)

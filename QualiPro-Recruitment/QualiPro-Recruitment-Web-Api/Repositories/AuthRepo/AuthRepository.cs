@@ -542,6 +542,61 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.AuthRepo
             }
         }
 
+        public async Task<CondidatAccountRoleModel> GetCondidatByToken(TokenModel tokenModel)
+        {
+            try
+            {
+                //var handler = new JwtSecurityTokenHandler();
+                //var handler = new TokenHandler();
+
+
+                if (string.IsNullOrWhiteSpace(tokenModel.AccessToken))
+                {
+                    throw new ArgumentException("Access token is null or empty");
+                }
+
+                //if (!handler.CanReadToken(tokenModel.AccessToken))
+                //{
+                //    throw new ArgumentException("Invalid JWT token format");
+                //}
+
+                //handler.ReadJwtToken(tokenModel.AccessToken);
+                var handler = new JwtSecurityTokenHandler();
+                var token = handler.ReadJwtToken(tokenModel.AccessToken
+                    );
+
+                var condidatAccountRoleModel = new CondidatAccountRoleModel()
+                {
+                    CondidatId = int.Parse(GetClaimValue(token, "CondidatId")),
+                    Summary = GetClaimValue(token, "Summary"),
+                    FirstName = GetClaimValue(token, "FirstName"),
+                    LastName = GetClaimValue(token, "LastName"),
+                    Country = GetClaimValue(token, "Country"),
+                    PhoneNumber = GetClaimValue(token, "PhoneNumber"),
+                    Birthdate = DateTime.Parse(GetClaimValue(token, "Birthdate")),
+                    AccountId = int.Parse(GetClaimValue(token, "AccountId")),
+                    Email = GetClaimValue(token, "Email"),
+                    Blocked = bool.Parse(GetClaimValue(token, "Blocked")),
+                    RoleId = int.Parse(GetClaimValue(token, "RoleId")),
+                    RoleName = GetClaimValue(token, "RoleName"),
+                };
+
+                return condidatAccountRoleModel;
+
+            }
+            catch (ArgumentException argEx)
+            {
+                // Handle specific argument exceptions
+                Console.WriteLine($"Argument error: {argEx.Message}");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                // Handle other exceptions
+                Console.WriteLine($"An error occurred: {ex.Message}");
+                throw;
+            }
+        }
 
         private string GetClaimValue(JwtSecurityToken token, string claimType)
         {
@@ -566,5 +621,6 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.AuthRepo
         //                                        .FirstOrDefaultAsync(a => a.CondidatId == condidatId);
         //    return account?.Email;
         //}
+       
     }
 }

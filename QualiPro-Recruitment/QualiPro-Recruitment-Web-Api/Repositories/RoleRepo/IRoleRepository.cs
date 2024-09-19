@@ -9,7 +9,6 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.RoleRepo
         Task<List<TabRole>> GetAllRoles();
         Task<TabRole> GetRoleById(int roleId);
         Task<TabRole> UpdateRole(int roleId, TabRole roleInput);
-        Task<TabRole> DeleteRole(int roleId);
-
+        Task<bool> DeleteRole(int roleId);
     }
 }

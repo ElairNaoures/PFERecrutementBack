@@ -69,6 +69,10 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
         }
 
 
+     
+
+
+
         [HttpGet("condidat/{condidatId}")]
         public async Task<IActionResult> GetEducationsByCondidatId(int condidatId)
         {

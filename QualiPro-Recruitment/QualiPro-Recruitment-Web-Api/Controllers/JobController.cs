@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using QualiPro_Recruitment_Data.Models;
 using QualiPro_Recruitment_Web_Api.DTOs;
 using QualiPro_Recruitment_Web_Api.Repositories.JobRepo;
@@ -22,10 +23,22 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
         [HttpPost]
         public async Task<IActionResult> AddJob([FromBody] JobDto jobInput)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
 
-            TabJob Job = await _jobRepository.AddJob(jobInput);
-            return Ok(Job);
+            try
+            {
+                TabJob job = await _jobRepository.AddJob(jobInput);
+                return Ok(job);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Internal server error: " + ex.Message);
+            }
         }
+
 
 
 
@@ -68,6 +81,44 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
             }
             return Ok("Job deleted successfully");
         }
+
+        [HttpGet("filter")]
+        public async Task<IActionResult> GetJobsByLetter([FromQuery] string letter)
+        {
+            if (string.IsNullOrEmpty(letter))
+            {
+                return BadRequest("Letter is required");
+            }
+
+            var jobs = await _jobRepository.GetJobsByLetter(letter);
+            return Ok(new { jobs, total = jobs.Count });
+        }
+
+        [HttpGet("by-profile")]
+        public async Task<IActionResult> GetJobsByProfile([FromQuery] string profileName)
+        {
+            if (string.IsNullOrEmpty(profileName))
+                return BadRequest("Profile name is required");
+
+            var jobs = await _jobRepository.GetJobsByProfile(profileName);
+            if (!jobs.Any())
+                return NotFound("No jobs found for the specified profile name");
+
+            return Ok(new { jobs, total = jobs.Count() });
+        }
+
+        [HttpGet("profile/{profileId}")]
+        public IActionResult GetJobsByProfileId(int profileId)
+        {
+            var jobs = _jobRepository.GetJobsByProfileId(profileId);
+            if (!jobs.Any())
+                return NotFound("No jobs found for the specified profile ID");
+
+            return Ok(jobs);
+        }
+
+
+
 
     }
 }

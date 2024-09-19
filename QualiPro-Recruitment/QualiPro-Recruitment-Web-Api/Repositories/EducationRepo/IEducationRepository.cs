@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using QualiPro_Recruitment_Data.Models;
 using QualiPro_Recruitment_Web_Api.DTOs;
+using System.Threading.Tasks;
 
 namespace QualiPro_Recruitment_Web_Api.Repositories.EducationRepo
 {
@@ -13,7 +14,7 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.EducationRepo
         Task<TabEducation> GetEducationById(int educationId);
         Task<TabEducation> UpdateEducation(int educationId, TabEducation educationInput);
         Task<TabEducation> DeleteEducation(int educationId);
-        Task<List<TabEducation>> GetEducationsByCondidatId(int condidatId); 
+        Task<List<TabEducation>> GetEducationsByCondidatId(int condidatId);
 
     }
 }

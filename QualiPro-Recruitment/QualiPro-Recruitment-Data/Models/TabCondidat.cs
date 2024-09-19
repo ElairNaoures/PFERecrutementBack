@@ -19,9 +19,19 @@ public partial class TabCondidat
 
     public DateTime? Birthdate { get; set; }
 
+    public string? ImageFileName { get; set; }
+
+    public string? CvFileName { get; set; }
+
+    public bool? Deleted { get; set; }
+
+    public virtual ICollection<Notification> Notifications { get; set; } = new List<Notification>();
+
     public virtual ICollection<ProfessionalExperience> ProfessionalExperiences { get; set; } = new List<ProfessionalExperience>();
 
     public virtual ICollection<TabAccountCondidat> TabAccountCondidats { get; set; } = new List<TabAccountCondidat>();
 
     public virtual ICollection<TabEducation> TabEducations { get; set; } = new List<TabEducation>();
+
+    public virtual ICollection<TabJobApplication> TabJobApplications { get; set; } = new List<TabJobApplication>();
 }

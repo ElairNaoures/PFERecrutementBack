@@ -14,4 +14,6 @@ public partial class TabSkill
     public bool? SoftSkill { get; set; }
 
     public bool? ToolsSkill { get; set; }
+
+    public virtual ICollection<TabJobSkill> TabJobSkills { get; set; } = new List<TabJobSkill>();
 }

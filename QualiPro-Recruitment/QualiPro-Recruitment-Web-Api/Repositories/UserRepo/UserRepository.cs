@@ -2,36 +2,57 @@
 using QualiPro_Recruitment_Data.Data;
 using QualiPro_Recruitment_Data.Models;
 using QualiPro_Recruitment_Web_Api.DTOs;
+using QualiPro_Recruitment_Web_Api.Models;
 
 namespace QualiPro_Recruitment_Web_Api.Repositories.UserRepo
 {
     public class UserRepository : IUserRepository
     {
         private readonly QualiProContext _qualiProContext;
+        private readonly string _imageFolderPath;
+
 
         public UserRepository(QualiProContext qualiProContext)
         {
             _qualiProContext = qualiProContext;
+            _imageFolderPath = "C:\\Users\\LENOVO\\Desktop\\PfERecrutement\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\UploadedImages";
+
 
         }
 
-        public async Task<TabUser> AddUser(UserDTO userInput)
-        {
-            TabUser user = new TabUser()
-            {
-                FirstName = userInput.FirstName,
-                LastName = userInput.LastName,
-                Country = userInput.Country,
-                PhoneNumber = userInput.PhoneNumber,
-                Birthdate = userInput.Birthdate,
-                RoleId = userInput.RoleId
-            };
 
-            await _qualiProContext.AddAsync(user);
-            await _qualiProContext.SaveChangesAsync();
-            return user;
-        }
+        //public async Task<TabUser> AddUser(UserAccountRoleModel userInput, string hashedPassword)
+        //{
+        //    // Create a new TabUser object
+        //    var user = new TabUser
+        //    {
+        //        FirstName = userInput.FirstName,
+        //        LastName = userInput.LastName,
+        //        Country = userInput.Country,
+        //        PhoneNumber = userInput.PhoneNumber,
+        //        Birthdate = userInput.Birthdate,
+        //        RoleId = userInput.RoleId
+        //    };
 
+        //    // Add user to the context
+        //    await _qualiProContext.TabUsers.AddAsync(user);
+        //    await _qualiProContext.SaveChangesAsync();
+
+        //    // Create a new TabAccount object linked to the user
+        //    var account = new TabAccount
+        //    {
+        //        Email = userInput.Email,
+        //        Password = hashedPassword,
+        //        Blocked = userInput.Blocked ?? false,
+        //        UserId = user.Id  // Link the account to the user
+        //    };
+
+        //    // Add account to the context
+        //    await _qualiProContext.TabAccounts.AddAsync(account);
+        //    await _qualiProContext.SaveChangesAsync();
+
+        //    return user;
+        //}
         //public async Task<List<TabUser>> GetAllUsers()
         //{
 
@@ -53,6 +74,8 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.UserRepo
         public async Task<List<UserDTO>> GetAllUsers()
         {
             return await _qualiProContext.TabUsers
+                  .Where(p => p.Deleted == false || p.Deleted == null)
+                .OrderByDescending(p => p.Id)
                                  .Include(u => u.Role)
                                  .Select(u => new UserDTO
                                  {
@@ -62,6 +85,7 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.UserRepo
                                      Country = u.Country,
                                      PhoneNumber = u.PhoneNumber,
                                      Birthdate = u.Birthdate,
+                                     //RoleId = u.RoleId,
                                      RoleName = u.Role.RoleName
                                  })
                                  .ToListAsync();
@@ -69,7 +93,8 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.UserRepo
 
         public async Task<UserDTO> GetUserById(int userId)
         {
-            return await _qualiProContext.TabUsers
+            return await _qualiProContext.TabUsers.Where(p => p.Id == userId && (p.Deleted == false || p.Deleted == null))
+
                                  .Include(u => u.Role)
                                  .Where(u => u.Id == userId)
                                  .Select(u => new UserDTO
@@ -86,32 +111,46 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.UserRepo
                                  .FirstOrDefaultAsync();
         }
 
-        public async Task<TabUser> UpdateUser(int userId, TabUser userInput)
+        public async Task UpdateUser(UserDTO userDTO)
         {
-            var user = await _qualiProContext.TabUsers.FirstOrDefaultAsync(p => p.Id == userId);
-            user.FirstName = userInput.FirstName;
-            user.LastName = userInput.LastName;
-            user.Country = userInput.Country;
-            user.PhoneNumber = userInput.PhoneNumber;
-            user.Birthdate = userInput.Birthdate;
-            user.RoleId = userInput.RoleId;
-            
+            var user = await _qualiProContext.TabUsers.FindAsync(userDTO.Id);
+            if (user == null)
+            {
+                return;
+            }
+            user.FirstName = userDTO.FirstName;
+            user.LastName = userDTO.LastName;
+            user.Country = userDTO.Country;
+            user.PhoneNumber = userDTO.PhoneNumber;
+            user.Birthdate = userDTO.Birthdate;
+            user.RoleId = userDTO.RoleId;
 
+            if (!string.IsNullOrEmpty(userDTO.ImageFileName))
+            {
+                user.ImageFileName = SaveFile(_imageFolderPath, userDTO.ImageFileName);
+            }
+            _qualiProContext.TabUsers.Update(user);
             await _qualiProContext.SaveChangesAsync();
-            return user;
         }
 
-        public async Task<TabUser> DeleteUser(int userId)
+
+        public async Task<bool> DeleteUser(int userId)
         {
             var user = await _qualiProContext.TabUsers.FindAsync(userId);
             if (user == null)
             {
-                return null;
+                return false;
+                user.Deleted = true;
             }
-            _qualiProContext.TabUsers.Remove(user);
             await _qualiProContext.SaveChangesAsync();
-            return user;
+            return true;
         }
-
+        private string SaveFile(string folderPath, string fileName)
+        {
+            // Logic to save the file
+            var filePath = Path.Combine(folderPath, fileName);
+            // Here you can add code to actually move the file to the desired folder
+            return fileName;
+        }
     }
 }

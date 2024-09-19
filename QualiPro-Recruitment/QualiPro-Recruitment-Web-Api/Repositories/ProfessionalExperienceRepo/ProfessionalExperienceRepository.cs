@@ -37,7 +37,7 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.ProfessionalExperienceRepo
 
         public async Task<List<ProfessionalExperience>> GetAllProfessionalExperiences()
         {
-            var ListProfessionalExperiences = await _qualiProContext.ProfessionalExperiences.ToListAsync();
+            var ListProfessionalExperiences = await _qualiProContext.ProfessionalExperiences.OrderByDescending(p => p.Id).ToListAsync();
             return ListProfessionalExperiences;
         }
 
@@ -58,7 +58,7 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.ProfessionalExperienceRepo
             professionalExperience.StartDate = professionalExperienceInput.StartDate;
             professionalExperience.EndDate = professionalExperienceInput.EndDate;
             professionalExperience.Description = professionalExperienceInput.Description;
-            professionalExperience.CondidatId = professionalExperienceInput.CondidatId;
+           // professionalExperience.CondidatId = professionalExperienceInput.CondidatId;
 
 
             
