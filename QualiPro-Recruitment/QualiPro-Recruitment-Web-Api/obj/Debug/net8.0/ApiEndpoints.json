@@ -857,6 +857,22 @@
   },
   {
     "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.JobApplicationController",
+    "Method": "GetJobApplicationDetailsByJobId",
+    "RelativePath": "api/JobApplication/job/{jobId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jobId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.JobApplicationController",
     "Method": "GetJobsWithApplicationCount",
     "RelativePath": "api/JobApplication/jobs-with-application-count",
     "HttpMethod": "GET",

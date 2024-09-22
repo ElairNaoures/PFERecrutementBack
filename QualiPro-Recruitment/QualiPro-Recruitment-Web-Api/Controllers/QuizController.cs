@@ -91,6 +91,7 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
             if (!result) return NotFound();
             return NoContent();
         }
+
         //[HttpGet("job-application/{jobApplicationId}")]
         //public async Task<ActionResult<IEnumerable<QuizDto>>> GetQuizzesByJobApplication(int jobApplicationId)
         //{
@@ -102,12 +103,25 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
         //        Id = q.Id,
         //        QuizName = q.QuizName,
         //        JobProfileId = q.TabProfileJobs.FirstOrDefault()?.Id ?? 0,
-        //        QuestionId = q.TabQuestions.FirstOrDefault()?.Id ?? 0,
-        //        QuizEvaluationId = q.TabQuizEvaluations.FirstOrDefault()?.Id ?? 0
+        //        Questions = q.TabQuestions.Select(tq => new QuestionDto
+        //        {
+        //            Id = tq.Id,
+        //            QuestionName = tq.QuestionName,
+        //            QuizId = tq.QuizId,
+        //            Coefficient = tq.Coefficient,
+        //            CorrectQuestionOptionId = tq.CorrectQuestionOptionId,
+        //            QuestionOptions = tq.TabQuestionOptions.Select(qo => new QuestionOptionDto
+        //            {
+        //                Id = qo.Id,
+        //                QuestionOptionName = qo.QuestionOptionName,
+        //                QuestionId = qo.QuestionId
+        //            }).ToList()
+        //        }).ToList()
         //    });
 
         //    return Ok(quizDtos);
         //}
+
         [HttpGet("job-application/{jobApplicationId}")]
         public async Task<ActionResult<IEnumerable<QuizDto>>> GetQuizzesByJobApplication(int jobApplicationId)
         {
@@ -119,25 +133,27 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
                 Id = q.Id,
                 QuizName = q.QuizName,
                 JobProfileId = q.TabProfileJobs.FirstOrDefault()?.Id ?? 0,
-                Questions = q.TabQuestions.Select(tq => new QuestionDto
-                {
-                    Id = tq.Id,
-                    QuestionName = tq.QuestionName,
-                    QuizId = tq.QuizId,
-                    Coefficient = tq.Coefficient,
-                    CorrectQuestionOptionId = tq.CorrectQuestionOptionId,
-                    QuestionOptions = tq.TabQuestionOptions.Select(qo => new QuestionOptionDto
+                Questions = q.TabQuestions
+                    // Corrigez la conversion en bool pour "Deleted"
+                    .Where(tq => tq.Deleted == false || tq.Deleted == null)
+                    .Select(tq => new QuestionDto
                     {
-                        Id = qo.Id,
-                        QuestionOptionName = qo.QuestionOptionName,
-                        QuestionId = qo.QuestionId
+                        Id = tq.Id,
+                        QuestionName = tq.QuestionName,
+                        QuizId = tq.QuizId,
+                        Coefficient = tq.Coefficient,
+                        CorrectQuestionOptionId = tq.CorrectQuestionOptionId,
+                        QuestionOptions = tq.TabQuestionOptions.Select(qo => new QuestionOptionDto
+                        {
+                            Id = qo.Id,
+                            QuestionOptionName = qo.QuestionOptionName,
+                            QuestionId = qo.QuestionId
+                        }).ToList()
                     }).ToList()
-                }).ToList()
             });
 
             return Ok(quizDtos);
         }
-
 
 
     }

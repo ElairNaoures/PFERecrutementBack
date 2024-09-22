@@ -15,6 +15,8 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.JobApplicationRepo
         Task<int> GetApplicationCountByJobIdAsync(int jobId);
         Task<IEnumerable<TabJobApplication>> GetJobsWithApplicationCount();
         Task<IEnumerable<TabJobApplication>> GetCandidatesWithScoreAboveThreshold();
+        Task<IEnumerable<TabJobApplication>> GetJobApplicationsByJobIdAsync(int jobId);
+
 
     }
 }

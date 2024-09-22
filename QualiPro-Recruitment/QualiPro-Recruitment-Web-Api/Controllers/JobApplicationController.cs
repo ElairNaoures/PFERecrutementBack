@@ -229,5 +229,39 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
 
             return Ok(candidatesAboveThreshold);
         }
+
+
+        [HttpGet("job/{jobId}")]
+        public async Task<ActionResult<object>> GetJobApplicationDetailsByJobId(int jobId)
+        {
+            var job = await _jobRepository.GetJobById(jobId);
+            if (job == null)
+                return NotFound(new { message = "Job not found." });
+
+            var jobApplications = await _jobApplicationRepository.GetJobApplicationsByJobIdAsync(jobId);
+            int applicationCount = jobApplications.Count(); // Compte des candidatures
+
+            var bestCandidate = jobApplications
+                .Where(ja => ja.Condidat != null && (!ja.Deleted.HasValue || !ja.Deleted.Value))
+                .OrderByDescending(ja => ja.Score)
+                .Select(ja => new
+                {
+                    CandidateName = ja.Condidat.FirstName + " " + ja.Condidat.LastName, // Combinaison du prénom et du nom
+                    Score = ja.Score
+                })
+                .FirstOrDefault();
+
+            return Ok(new
+            {
+                JobTitle = job.Title,
+                ApplicationCount = applicationCount,
+                BestCandidate = bestCandidate
+            });
+        }
+
     }
+
+
+
+
 }

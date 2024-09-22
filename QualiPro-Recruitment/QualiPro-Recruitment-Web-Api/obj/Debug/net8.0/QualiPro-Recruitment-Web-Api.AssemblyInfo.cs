@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QualiPro-Recruitment-Web-Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e41c34f4ce780a1e8c9f151ac4f9b9d0223ce16d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74ae5c96df900989d5b2100f20ceb311b37e661a")]
 [assembly: System.Reflection.AssemblyProductAttribute("QualiPro-Recruitment-Web-Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QualiPro-Recruitment-Web-Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

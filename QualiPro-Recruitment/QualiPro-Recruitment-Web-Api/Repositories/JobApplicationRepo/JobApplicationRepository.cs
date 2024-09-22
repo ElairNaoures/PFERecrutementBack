@@ -136,7 +136,13 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.JobApplicationRepo
 
 
 
-
+        public async Task<IEnumerable<TabJobApplication>> GetJobApplicationsByJobIdAsync(int jobId)
+        {
+            return await _qualiProContext.TabJobApplications
+                .Include(ja => ja.Condidat) // Inclure les candidats pour obtenir les noms
+                .Where(ja => ja.JobId == jobId && (!ja.Deleted.HasValue || !ja.Deleted.Value))
+                .ToListAsync();
+        }
 
 
     }

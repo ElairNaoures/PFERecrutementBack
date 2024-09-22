@@ -24,6 +24,33 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
 
         }
 
+        //[HttpGet]
+        //public async Task<ActionResult<IEnumerable<QuestionDto>>> GetAllQuestions()
+        //{
+        //    var questions = await _questionRepository.GetAllQuestions();
+        //    var questionDtos = new List<QuestionDto>();
+
+        //    foreach (var question in questions)
+        //    {
+        //        var questionOptions = await _questionOptionRepository.GetAllQuestionOptionsByQuestionId(question.Id);
+        //        questionDtos.Add(new QuestionDto
+        //        {
+        //            Id = question.Id,
+        //            QuestionName = question.QuestionName,
+        //            QuizId = question.QuizId,
+        //            Coefficient = question.Coefficient,
+        //            CorrectQuestionOptionId = question.CorrectQuestionOptionId,
+        //            QuestionOptions = questionOptions.Select(qo => new QuestionOptionDto
+        //            {
+        //                Id = qo.Id,
+        //                QuestionOptionName = qo.QuestionOptionName,
+        //                QuestionId = qo.QuestionId
+        //            }).ToList()
+        //        });
+        //    }
+
+        //    return Ok(questionDtos);
+        //}
         [HttpGet]
         public async Task<ActionResult<IEnumerable<QuestionDto>>> GetAllQuestions()
         {
@@ -32,7 +59,13 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
 
             foreach (var question in questions)
             {
+                // Récupération du nom de l'option correcte
+                var correctOption = question.CorrectQuestionOptionId.HasValue
+                    ? await _questionOptionRepository.GetQuestionOptionById(question.CorrectQuestionOptionId.Value)
+                    : null;
+
                 var questionOptions = await _questionOptionRepository.GetAllQuestionOptionsByQuestionId(question.Id);
+
                 questionDtos.Add(new QuestionDto
                 {
                     Id = question.Id,
@@ -40,6 +73,7 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
                     QuizId = question.QuizId,
                     Coefficient = question.Coefficient,
                     CorrectQuestionOptionId = question.CorrectQuestionOptionId,
+                    CorrectQuestionOptionName = correctOption?.QuestionOptionName, // Ajout du nom de l'option correcte
                     QuestionOptions = questionOptions.Select(qo => new QuestionOptionDto
                     {
                         Id = qo.Id,
@@ -52,11 +86,40 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
             return Ok(questionDtos);
         }
 
+        //[HttpGet("{id}")]
+        //public async Task<ActionResult<QuestionDto>> GetQuestionById(int id)
+        //{
+        //    var question = await _questionRepository.GetQuestionById(id);
+        //    if (question == null) return NotFound();
+
+        //    var questionOptions = await _questionOptionRepository.GetAllQuestionOptionsByQuestionId(id);
+        //    var questionDto = new QuestionDto
+        //    {
+        //        Id = question.Id,
+        //        QuestionName = question.QuestionName,
+        //        QuizId = question.QuizId,
+        //        Coefficient = question.Coefficient,
+        //        CorrectQuestionOptionId = question.CorrectQuestionOptionId,
+        //        QuestionOptions = questionOptions.Select(qo => new QuestionOptionDto
+        //        {
+        //            Id = qo.Id,
+        //            QuestionOptionName = qo.QuestionOptionName,
+        //            QuestionId = qo.QuestionId
+        //        }).ToList()
+        //    };
+
+        //    return Ok(questionDto);
+        //}
         [HttpGet("{id}")]
         public async Task<ActionResult<QuestionDto>> GetQuestionById(int id)
         {
             var question = await _questionRepository.GetQuestionById(id);
             if (question == null) return NotFound();
+
+            // Récupération du nom de l'option correcte
+            var correctOption = question.CorrectQuestionOptionId.HasValue
+                ? await _questionOptionRepository.GetQuestionOptionById(question.CorrectQuestionOptionId.Value)
+                : null;
 
             var questionOptions = await _questionOptionRepository.GetAllQuestionOptionsByQuestionId(id);
             var questionDto = new QuestionDto
@@ -66,6 +129,7 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
                 QuizId = question.QuizId,
                 Coefficient = question.Coefficient,
                 CorrectQuestionOptionId = question.CorrectQuestionOptionId,
+                CorrectQuestionOptionName = correctOption?.QuestionOptionName, // Ajout du nom de l'option correcte
                 QuestionOptions = questionOptions.Select(qo => new QuestionOptionDto
                 {
                     Id = qo.Id,
@@ -85,7 +149,8 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
                 QuestionName = questionDto.QuestionName,
                 QuizId = questionDto.QuizId,
                 Coefficient = questionDto.Coefficient,
-               CorrectQuestionOptionId = questionDto.CorrectQuestionOptionId
+               CorrectQuestionOptionId = questionDto.CorrectQuestionOptionId,
+              // CorrectQuestionOptionName = questionDto.CorrectQuestionOptionName
             };
 
             var createdQuestion = await _questionRepository.AddQuestion(question);
@@ -119,6 +184,30 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
             if (!result) return NotFound();
             return NoContent();
         }
+
+        //[HttpGet("quiz/{quizId}")]
+        //public async Task<ActionResult<IEnumerable<QuestionDto>>> GetQuestionsByQuiz(int quizId)
+        //{
+        //    var questions = await _questionRepository.GetQuestionsByQuiz(quizId);
+        //    if (questions == null || !questions.Any()) return NotFound();
+
+        //    var questionDtos = questions.Select(q => new QuestionDto
+        //    {
+        //        Id = q.Id,
+        //        QuestionName = q.QuestionName,
+        //        QuizId = q.QuizId,
+        //        Coefficient = q.Coefficient,
+        //        CorrectQuestionOptionId = q.CorrectQuestionOptionId,
+        //        QuestionOptions = q.TabQuestionOptions.Select(qo => new QuestionOptionDto
+        //        {
+        //            Id = qo.Id,
+        //            QuestionOptionName = qo.QuestionOptionName,
+        //            QuestionId = qo.QuestionId
+        //        }).ToList()
+        //    }).ToList();
+
+        //    return Ok(questionDtos);
+        //}
         [HttpGet("quiz/{quizId}")]
         public async Task<ActionResult<IEnumerable<QuestionDto>>> GetQuestionsByQuiz(int quizId)
         {
@@ -132,6 +221,7 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
                 QuizId = q.QuizId,
                 Coefficient = q.Coefficient,
                 CorrectQuestionOptionId = q.CorrectQuestionOptionId,
+                CorrectQuestionOptionName = q.CorrectQuestionOption?.QuestionOptionName, // Fetch the correct option's name
                 QuestionOptions = q.TabQuestionOptions.Select(qo => new QuestionOptionDto
                 {
                     Id = qo.Id,
@@ -142,6 +232,7 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
 
             return Ok(questionDtos);
         }
+
 
     }
 }

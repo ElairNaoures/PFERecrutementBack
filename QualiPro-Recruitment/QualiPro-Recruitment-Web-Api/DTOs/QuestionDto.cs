@@ -7,6 +7,8 @@
         public int? QuizId { get; set; }
         public int? Coefficient { get; set; }
         public int? CorrectQuestionOptionId { get; set; }
+        public string CorrectQuestionOptionName { get; set; } = string.Empty; 
+
         public List<QuestionOptionDto> QuestionOptions { get; set; } = new List<QuestionOptionDto>();
 
 
