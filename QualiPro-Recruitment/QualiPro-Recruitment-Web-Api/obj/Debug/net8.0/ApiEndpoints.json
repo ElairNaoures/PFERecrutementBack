@@ -831,6 +831,27 @@
   },
   {
     "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.JobApplicationController",
+    "Method": "GetCondidatInfo",
+    "RelativePath": "api/JobApplication/condidat/{condidatId}/job/{jobId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "condidatId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "jobId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.JobApplicationController",
     "Method": "GetApplicationCountByJobId",
     "RelativePath": "api/JobApplication/count/{jobId}",
     "HttpMethod": "GET",
@@ -857,6 +878,32 @@
   },
   {
     "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.JobApplicationController",
+    "Method": "GetCandidatesByJobApplicationId",
+    "RelativePath": "api/JobApplication/job-application/{jobApplicationId}/candidates",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jobApplicationId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.JobApplicationController",
     "Method": "GetJobApplicationDetailsByJobId",
     "RelativePath": "api/JobApplication/job/{jobId}",
     "HttpMethod": "GET",
@@ -870,6 +917,32 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.JobApplicationController",
+    "Method": "GetAllJobApplicationsByJobId",
+    "RelativePath": "api/JobApplication/jobinfo/{jobId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jobId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.JobApplicationController",

@@ -103,5 +103,7 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
             await _condidatRepository.DeleteCondidatAsync(id);
             return NoContent();
         }
+
+
     }
 }

@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using QualiPro_Recruitment_Data.Data;
 using QualiPro_Recruitment_Data.Models;
+using QualiPro_Recruitment_Web_Api.DTOs;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -142,6 +143,37 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.JobApplicationRepo
                 .Include(ja => ja.Condidat) // Inclure les candidats pour obtenir les noms
                 .Where(ja => ja.JobId == jobId && (!ja.Deleted.HasValue || !ja.Deleted.Value))
                 .ToListAsync();
+        }
+
+        public async Task<IEnumerable<TabCondidat>> GetCandidatesByJobApplicationIdAsync(int jobApplicationId)
+        {
+            return await _qualiProContext.TabJobApplications
+                .Where(ja => ja.Id == jobApplicationId)
+                .Include(ja => ja.Condidat) // Assurez-vous que la relation est correctement incluse
+                .Select(ja => ja.Condidat)
+                .ToListAsync();
+        }
+        public async Task<CondidatDto?> GetCondidatInfo(int condidatId, int jobId)
+        {
+            var jobApplication = await _qualiProContext.TabJobApplications
+                .Include(ja => ja.Condidat)
+                .FirstOrDefaultAsync(ja => ja.CondidatId == condidatId && ja.JobId == jobId);
+
+            if (jobApplication?.Condidat == null)
+                return null;
+
+            return new CondidatDto
+            {
+                Id = jobApplication.Condidat.Id,
+                FirstName = jobApplication.Condidat.FirstName,
+                LastName = jobApplication.Condidat.LastName,
+                Summary = jobApplication.Condidat.Summary,
+                Country = jobApplication.Condidat.Country,
+                PhoneNumber = jobApplication.Condidat.PhoneNumber,
+                Birthdate = jobApplication.Condidat.Birthdate,
+                ImageFileName = jobApplication.Condidat.ImageFileName,
+                CvFileName = jobApplication.Condidat.CvFileName,
+            };
         }
 
 

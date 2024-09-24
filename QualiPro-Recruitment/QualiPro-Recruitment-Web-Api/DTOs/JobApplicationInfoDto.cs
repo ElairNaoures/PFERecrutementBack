@@ -2,9 +2,12 @@
 {
     public class JobApplicationInfoDto
     {
-        public string JobTitle { get; set; }
-        public int CandidateCount { get; set; }
-        public string BestCandidateName { get; set; }
-        public int HighestScore { get; set; }
+        public int Id { get; set; }
+        public int? CondidatId { get; set; }
+        public int? JobId { get; set; }
+        public DateTime? MeetingDate { get; set; }
+        public double? HeadToHeadInterviewNote { get; set; }
+        public double? Score { get; set; }
+        public string CandidateFullName { get; set; }
     }
 }

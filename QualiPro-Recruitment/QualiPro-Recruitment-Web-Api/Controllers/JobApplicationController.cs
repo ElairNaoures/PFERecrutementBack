@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using QualiPro_Recruitment_Data.Models;
 using QualiPro_Recruitment_Web_Api.DTOs;
+using QualiPro_Recruitment_Web_Api.Models;
 using QualiPro_Recruitment_Web_Api.Repositories.JobApplicationRepo;
 using QualiPro_Recruitment_Web_Api.Repositories.JobRepo;
 using QualiPro_Recruitment_Web_Api.Repositories.NotificationRepo;
@@ -257,6 +258,106 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
                 ApplicationCount = applicationCount,
                 BestCandidate = bestCandidate
             });
+        }
+        //[HttpGet("job/{jobId}/applications")]
+        //public async Task<ActionResult<IEnumerable<JobApplicationDto>>> GetAllJobApplicationsByJobId(int jobId)
+        //{
+        //    var jobApplications = await _jobApplicationRepository.GetJobApplicationsByJobIdAsync(jobId);
+        //    if (jobApplications == null || !jobApplications.Any())
+        //    {
+        //        return NotFound(new { message = "No job applications found for this job." });
+        //    }
+
+        //    var jobApplicationDtos = jobApplications.Select(ja => new JobApplicationDto
+        //    {
+        //        Id = ja.Id,
+        //        CondidatId = ja.CondidatId,
+        //        JobId = ja.JobId,
+        //        MeetingDate = ja.MeetingDate,
+        //        HeadToHeadInterviewNote = ja.HeadToHeadInterviewNote,
+        //        Score = ja.Score // Assurez-vous que Score est correctement assigné
+        //    });
+
+        //    return Ok(jobApplicationDtos);
+        //}
+
+        [HttpGet("jobinfo/{jobId}")]
+        public async Task<ActionResult<IEnumerable<object>>> GetAllJobApplicationsByJobId(int jobId)
+        {
+            var jobApplications = await _jobApplicationRepository.GetJobApplicationsByJobIdAsync(jobId);
+
+            var jobApplicationDtos = jobApplications.Select(ja => new
+            {
+                CondidatId = ja.CondidatId,
+                CandidateName = ja.Condidat != null ? $"{ja.Condidat.FirstName} {ja.Condidat.LastName}" : "Unknown",
+                HeadToHeadInterviewNote = ja.HeadToHeadInterviewNote,
+                Score = ja.Score
+            }).ToList();
+
+            return Ok(jobApplicationDtos);
+        }
+        //[HttpGet("job-application/{jobApplicationId}/candidates")]
+        //public async Task<ActionResult<IEnumerable<CondidatAccountRoleModel>>> GetCandidatesByJobApplicationId(int jobApplicationId)
+        //{
+        //    var jobApplication = await _jobApplicationRepository.GetJobApplicationByIdAsync(jobApplicationId);
+        //    if (jobApplication == null)
+        //    {
+        //        return NotFound(new { message = "Job application not found." });
+        //    }
+
+        //    var candidates = await _jobApplicationRepository.GetCandidatesByJobApplicationIdAsync(jobApplicationId);
+
+        //    var candidateDetails = candidates.Select(c => new CondidatAccountRoleModel
+        //    {
+        //        CondidatId = c.Id, // Ensure you have this property in your candidate object
+        //        FirstName = c.FirstName,
+        //        LastName = c.LastName,
+        //        Country = c.Country,
+        //        PhoneNumber = c.PhoneNumber,
+        //        Birthdate = c.Birthdate,
+        //        //Email = c.Email,
+        //        Summary = c.Summary,
+        //       // AccountId = c.AccountId, // Ensure you have this property in your candidate object
+        //        //Blocked = c.Blocked, // Ensure you have this property in your candidate object
+        //        //RoleId = c.RoleId, // Ensure you have this property in your candidate object
+        //        //RoleName = c.RoleName // Ensure you have this property in your candidate object
+        //    }).ToList();
+
+        //    return Ok(candidateDetails);
+        //}
+        [HttpGet("job-application/{jobApplicationId}/candidates")]
+        public async Task<ActionResult<IEnumerable<object>>> GetCandidatesByJobApplicationId(int jobApplicationId)
+        {
+            var jobApplication = await _jobApplicationRepository.GetJobApplicationByIdAsync(jobApplicationId);
+            if (jobApplication == null)
+            {
+                return NotFound(new { message = "Job application not found." });
+            }
+
+            var candidates = await _jobApplicationRepository.GetCandidatesByJobApplicationIdAsync(jobApplicationId);
+
+            var candidateDetails = candidates.Select(c => new
+            {
+                c.Id,
+                c.FirstName,
+                c.LastName,
+                c.Country,
+                c.PhoneNumber,
+                c.Birthdate,
+                //c.Email,
+                 c.Summary
+            }).ToList();
+
+            return Ok(candidateDetails);
+        }
+        [HttpGet("condidat/{condidatId}/job/{jobId}")]
+        public async Task<IActionResult> GetCondidatInfo(int condidatId, int jobId)
+        {
+            var condidatInfo = await _jobApplicationRepository.GetCondidatInfo(condidatId, jobId);
+            if (condidatInfo == null)
+                return NotFound();
+
+            return Ok(condidatInfo);
         }
 
     }
