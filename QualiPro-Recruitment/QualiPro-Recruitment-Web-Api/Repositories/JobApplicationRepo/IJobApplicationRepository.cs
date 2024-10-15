@@ -20,6 +20,9 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.JobApplicationRepo
         Task<IEnumerable<TabCondidat>> GetCandidatesByJobApplicationIdAsync(int jobApplicationId);
 
         Task<CondidatDto?> GetCondidatInfo(int condidatId, int jobId);
+        Task<TabCondidat> GetCondidatById(int condidatId);
+        Task<string?> GetCondidatEmailById(int? condidatId);
+        Task<string?> GetCondidatNameById(int? condidatId);
 
     }
 }

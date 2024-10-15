@@ -176,6 +176,30 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.JobApplicationRepo
             };
         }
 
+        public async Task<TabCondidat> GetCondidatById(int condidatId)
+        {
+            return await _qualiProContext.TabCondidats
+                .Include(c => c.TabAccountCondidats)
+                .FirstOrDefaultAsync(c => c.Id == condidatId);
+        }
+
+        public async Task<string?> GetCondidatEmailById(int? condidatId)
+        {
+            if (!condidatId.HasValue) return null; // Handle the case where condidatId is null
+
+            var condidat = await GetCondidatById(condidatId.Value);
+            var accountCondidat = condidat.TabAccountCondidats.FirstOrDefault();
+            return accountCondidat?.Email;
+        }
+        public async Task<string?> GetCondidatNameById(int? condidatId)
+        {
+            if (!condidatId.HasValue) return null; // Handle the case where condidatId is null
+
+            var condidat = await GetCondidatById(condidatId.Value);
+            return condidat != null ? $"{condidat.FirstName} {condidat.LastName}" : null; // Return full name
+        }
+
+
 
     }
 }

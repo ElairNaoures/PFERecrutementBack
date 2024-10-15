@@ -621,6 +621,17 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.AuthRepo
         //                                        .FirstOrDefaultAsync(a => a.CondidatId == condidatId);
         //    return account?.Email;
         //}
-       
+
+
+        public async Task<string> GetRoleNameById(int roleId)
+        {
+            var role = await _qualiProContext.TabRoles.FindAsync(roleId);
+            return role?.RoleName;
+        }
+
+
     }
+
+
+
 }

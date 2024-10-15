@@ -129,6 +129,21 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.JobRepo
                 .ToList();
         }
 
+        public async Task<TabUser> GetUserById(int userId)
+        {
+            return await _qualiProContext.TabUsers
+                .Include(u => u.TabAccounts)
+                .FirstOrDefaultAsync(u => u.Id == userId);
+        }
+
+        public async Task<string?> GetUserEmailById(int userId)
+        {
+            var user = await GetUserById(userId);
+            var account = user.TabAccounts.FirstOrDefault(); 
+            return account?.Email; 
+        }
+
+
 
     }
 }

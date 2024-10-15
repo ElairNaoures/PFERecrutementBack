@@ -14,13 +14,13 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.AuthRepo
         Task<AuthModel> SignUpCondidat(CondidatAccountRoleModel condidatAccountRoleModel);
         Task<UserAccountRoleModel> GetUserByToken(TokenModel tokenModel);
         Task<CondidatAccountRoleModel> GetCondidatByToken(TokenModel tokenModel);
-       // Task<UserAccountRoleModel> GetUserByIdAsync(int userId);
+        // Task<UserAccountRoleModel> GetUserByIdAsync(int userId);
 
         //Task<CondidatAccountRoleModel> GetCondidatByToken(TokenModel tokenModel);
 
         // Task<TabAccountCondidat> GetCondidatAccountById(int id);
         //Task<string?> GetEmailByCondidatId(int condidatId);
-
+        Task<string> GetRoleNameById(int roleId);
 
 
     }

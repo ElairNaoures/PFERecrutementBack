@@ -7,6 +7,7 @@ using QualiPro_Recruitment_Web_Api.Repositories.JobApplicationRepo;
 using QualiPro_Recruitment_Web_Api.Repositories.JobRepo;
 using QualiPro_Recruitment_Web_Api.Repositories.NotificationRepo;
 using QualiPro_Recruitment_Web_Api.Repositories.UserRepo;
+using QualiPro_Recruitment_Web_Api.Services;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -22,9 +23,11 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
         private readonly IUserRepository _userRepository;
         private readonly IJobRepository _jobRepository;
         private readonly ILogger<JobApplicationController> _logger;
+        private readonly EmailService _emailService;
 
 
-        public JobApplicationController(IJobApplicationRepository jobApplicationRepository,
+
+        public JobApplicationController(IJobApplicationRepository jobApplicationRepository, EmailService emailService,
             INotificationRepository notificationRepository,
             IUserRepository userRepository, IJobRepository jobRepository, ILogger<JobApplicationController> logger // Ajouter le paramètre ILogger
 )
@@ -34,6 +37,8 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
             _userRepository = userRepository;
             _jobRepository = jobRepository;
             _logger = logger;
+            _emailService = emailService;
+
         }
 
         [HttpGet]
@@ -141,6 +146,136 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
         }
 
 
+        //[HttpPut("{id}")]
+        //public async Task<IActionResult> UpdateJobApplication(int id, [FromBody] JobApplicationDto jobApplicationDto)
+        //{
+        //    if (id != jobApplicationDto.Id)
+        //        return BadRequest("JobApplication ID mismatch.");
+
+        //    var existingJobApplication = await _jobApplicationRepository.GetJobApplicationByIdAsync(id);
+        //    if (existingJobApplication == null)
+        //        return NotFound();
+
+        //    existingJobApplication.MeetingDate = jobApplicationDto.MeetingDate ?? existingJobApplication.MeetingDate;
+        //    existingJobApplication.HeadToHeadInterviewNote = jobApplicationDto.HeadToHeadInterviewNote ?? existingJobApplication.HeadToHeadInterviewNote;
+        //    existingJobApplication.Score = jobApplicationDto.Score; // Pas besoin de vérifier les valeurs nulles ici
+
+        //    try
+        //    {
+        //        await _jobApplicationRepository.UpdateJobApplicationAsync(existingJobApplication);
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (await _jobApplicationRepository.GetJobApplicationByIdAsync(id) == null)
+        //            return NotFound();
+
+        //        throw;
+        //    }
+
+        //    return NoContent();
+        //}
+        //    [HttpPut("{id}")]
+        //    public async Task<IActionResult> UpdateJobApplication(int id, [FromBody] JobApplicationDto jobApplicationDto)
+        //    {
+        //        if (id != jobApplicationDto.Id)
+        //            return BadRequest("JobApplication ID mismatch.");
+
+        //        var existingJobApplication = await _jobApplicationRepository.GetJobApplicationByIdAsync(id);
+        //        if (existingJobApplication == null)
+        //            return NotFound();
+
+        //        // Store the old meeting date for comparison
+        //        var oldMeetingDate = existingJobApplication.MeetingDate;
+
+        //        existingJobApplication.MeetingDate = jobApplicationDto.MeetingDate ?? existingJobApplication.MeetingDate;
+        //        existingJobApplication.HeadToHeadInterviewNote = jobApplicationDto.HeadToHeadInterviewNote ?? existingJobApplication.HeadToHeadInterviewNote;
+        //        existingJobApplication.Score = jobApplicationDto.Score;
+
+        //        try
+        //        {
+        //            await _jobApplicationRepository.UpdateJobApplicationAsync(existingJobApplication);
+
+
+        //            // Check if MeetingDate was actually updated
+        //            if (oldMeetingDate != existingJobApplication.MeetingDate && existingJobApplication.CondidatId.HasValue)
+        //            {
+        //                // Get the email and name of the candidate
+        //                var candidateEmail = await _jobApplicationRepository.GetCondidatEmailById(existingJobApplication.CondidatId.Value);
+        //                var candidateName = await _jobApplicationRepository.GetCondidatNameById(existingJobApplication.CondidatId.Value);
+
+        //                // Format the MeetingDate to display only the date (without time)
+        //                string formattedMeetingDate = existingJobApplication.MeetingDate?.ToString("dd/MM/yyyy");
+
+        //                // HTML formatted email message with enhanced styling
+        //                string emailBody = $@"
+        //<html>
+        //<head>
+        //    <style>
+        //        body {{
+        //            font-family: Arial, sans-serif;
+        //            margin: 0;
+        //            padding: 20px;
+        //            background-color: #f4f4f4;
+        //        }}
+        //        .container {{
+        //            max-width: 600px;
+        //            margin: auto;
+        //            background-color: #ffffff;
+        //            padding: 20px;
+        //            border-radius: 8px;
+        //            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        //        }}
+        //        h2 {{
+        //            color: #2c3e50;
+        //            text-align: center;
+        //        }}
+        //        p {{
+        //            line-height: 1.6;
+        //            color: #333;
+        //        }}
+        //        .highlight {{
+        //            color: #e74c3c; /* Red color for emphasis */
+        //            font-weight: bold;
+        //        }}
+        //        .footer {{
+        //            margin-top: 20px;
+        //            text-align: center;
+        //            font-size: 0.9em;
+        //            color: #777;
+        //        }}
+        //    </style>
+        //</head>
+        //<body>
+        //    <div class='container'>
+        //        <h2>Félicitations!</h2>
+        //        <p>Bonjour cher {candidateName},</p>
+        //        <p>Nous avons le plaisir de vous informer que vous avez été sélectionné pour passer à l'étape suivante de notre processus de recrutement.</p>
+        //        <p>Votre entretien est prévu pour le <span class='highlight'>{formattedMeetingDate}</span>. </p>
+        //        <p>Nous sommes impatients de vous rencontrer!</p>
+        //        <p>Merci de votre intérêt et de votre participation.</p>
+        //        <div class='footer'>
+        //            <p>Cordialement,<br/>
+        //            L'équipe de recrutement</p>
+        //        </div>
+        //    </div>
+        //</body>
+        //</html>";
+
+        //                // Send the email
+        //                await _emailService.SendEmailAsync(candidateEmail, "Date d'entretient", emailBody);
+        //            }
+
+        //        }
+        //        catch (DbUpdateConcurrencyException)
+        //        {
+        //            if (await _jobApplicationRepository.GetJobApplicationByIdAsync(id) == null)
+        //                return NotFound();
+
+        //            throw;
+        //        }
+
+        //        return NoContent();
+        //    }
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateJobApplication(int id, [FromBody] JobApplicationDto jobApplicationDto)
         {
@@ -151,13 +286,86 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
             if (existingJobApplication == null)
                 return NotFound();
 
+            var oldMeetingDate = existingJobApplication.MeetingDate;
+
             existingJobApplication.MeetingDate = jobApplicationDto.MeetingDate ?? existingJobApplication.MeetingDate;
             existingJobApplication.HeadToHeadInterviewNote = jobApplicationDto.HeadToHeadInterviewNote ?? existingJobApplication.HeadToHeadInterviewNote;
-            existingJobApplication.Score = jobApplicationDto.Score; // Pas besoin de vérifier les valeurs nulles ici
+            existingJobApplication.Score = jobApplicationDto.Score;
 
             try
             {
                 await _jobApplicationRepository.UpdateJobApplicationAsync(existingJobApplication);
+
+                if (oldMeetingDate != existingJobApplication.MeetingDate && existingJobApplication.CondidatId.HasValue)
+                {
+                    var candidateEmail = await _jobApplicationRepository.GetCondidatEmailById(existingJobApplication.CondidatId.Value);
+                    var candidateName = await _jobApplicationRepository.GetCondidatNameById(existingJobApplication.CondidatId.Value);
+
+                    string formattedMeetingDate = existingJobApplication.MeetingDate?.ToString("dd/MM/yyyy");
+
+                    // Generate the quiz link using the job application ID
+                    var quizLink = $"http://localhost:4200/jobs/CandidateQuiz/{existingJobApplication.Id}";
+
+                    // HTML formatted email message with quiz link included
+                    string emailBody = $@"
+    <html>
+    <head>
+        <style>
+            body {{
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 20px;
+                background-color: #f4f4f4;
+            }}
+            .container {{
+                max-width: 600px;
+                margin: auto;
+                background-color: #ffffff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }}
+            h2 {{
+                color: #2c3e50;
+                text-align: center;
+            }}
+            p {{
+                line-height: 1.6;
+                color: #333;
+            }}
+            .highlight {{
+                color: #e74c3c; /* Red color for emphasis */
+                font-weight: bold;
+            }}
+            .footer {{
+                margin-top: 20px;
+                text-align: center;
+                font-size: 0.9em;
+                color: #777;
+            }}
+        </style>
+    </head>
+    <body>
+        <div class='container'>
+            <h2>Félicitations!</h2>
+            <p>Bonjour cher {candidateName},</p>
+            <p>Nous avons le plaisir de vous informer que vous avez été sélectionné pour passer à l'étape suivante de notre processus de recrutement.</p>
+            <p>Votre entretien est prévu pour le <span class='highlight'>{formattedMeetingDate}</span>. </p>
+            <p>Merci de cliquer sur le lien ci-dessous pour passer le quiz nécessaire :</p>
+            <p><a href='{quizLink}'>Passer le quiz</a></p>
+            <p>Nous sommes impatients de vous rencontrer!</p>
+            <div class='footer'>
+                <p>Cordialement,<br/>
+                L'équipe de recrutement</p>
+            </div>
+        </div>
+    </body>
+    </html>";
+
+                    // Send the email
+                    await _emailService.SendEmailAsync(candidateEmail, "Date d'entretien et lien de quiz", emailBody);
+                }
+
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -325,6 +533,82 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
 
         //    return Ok(candidateDetails);
         //}
+
+
+        [HttpPost("accept/{id}")]
+        public async Task<IActionResult> AcceptCandidate(int id)
+        {
+            // Get the job application by ID
+            var jobApplication = await _jobApplicationRepository.GetJobApplicationByIdAsync(id);
+            if (jobApplication == null)
+                return NotFound("Job application not found.");
+
+            // Get candidate email and name
+            var candidateEmail = await _jobApplicationRepository.GetCondidatEmailById(jobApplication.CondidatId);
+            var candidateName = await _jobApplicationRepository.GetCondidatNameById(jobApplication.CondidatId);
+
+            if (string.IsNullOrEmpty(candidateEmail) || string.IsNullOrEmpty(candidateName))
+                return BadRequest("Candidate information is incomplete.");
+
+            // Generate the acceptance email body
+            string emailBody = $@"
+     <html>
+    <body style='font-family: Arial, sans-serif; background-color: #f4f4f9; padding: 20px;'>
+        <div style='max-width: 600px; margin: 0 auto; background-color: white; border-radius: 10px; padding: 20px;'>
+            <h2 style='color: #4CAF50;'>Félicitations {candidateName}!</h2>
+            <p style='font-size: 16px;'>Nous sommes ravis de vous informer que vous avez été sélectionné(e) pour le poste auquel vous avez postulé.</p>
+            <p style='font-size: 16px;'>Veuillez contacter notre équipe des ressources humaines pour plus de détails.</p>
+            <p style='font-size: 16px;'>Nous avons hâte de collaborer avec vous!</p>
+            <br/>
+            <p style='font-size: 14px; color: #888;'>Cordialement,<br/>L'équipe de recrutement</p>
+        </div>
+    </body>
+    </html>";
+
+            // Send the acceptance email
+            await _emailService.SendEmailAsync(candidateEmail, "Félicitations", emailBody);
+
+            return Ok("Candidate accepted and email sent.");
+        }
+
+        [HttpPost("reject/{id}")]
+        public async Task<IActionResult> RejectCandidate(int id)
+        {
+            // Get the job application by ID
+            var jobApplication = await _jobApplicationRepository.GetJobApplicationByIdAsync(id);
+            if (jobApplication == null)
+                return NotFound("Job application not found.");
+
+            // Get candidate email and name
+            var candidateEmail = await _jobApplicationRepository.GetCondidatEmailById(jobApplication.CondidatId);
+            var candidateName = await _jobApplicationRepository.GetCondidatNameById(jobApplication.CondidatId);
+
+            if (string.IsNullOrEmpty(candidateEmail) || string.IsNullOrEmpty(candidateName))
+                return BadRequest("Candidate information is incomplete.");
+
+            // Generate the rejection email body
+            string emailBody = $@"
+   <html>
+    <body style='font-family: Arial, sans-serif; background-color: #f4f4f9; padding: 20px;'>
+        <div style='max-width: 600px; margin: 0 auto; background-color: white; border-radius: 10px; padding: 20px;'>
+            <h2 style='color: #e74c3c;'>Cher(ère) {candidateName},</h2>
+            <p style='font-size: 16px;'>Nous regrettons de vous informer que votre candidature n'a pas été retenue à cette occasion.</p>
+            <p style='font-size: 16px;'>Nous vous remercions pour votre intérêt pour notre entreprise et vous encourageons à postuler à d'autres offres à l'avenir.</p>
+            <p style='font-size: 16px;'>Nous vous souhaitons bonne chance dans vos futures démarches.</p>
+            <br/>
+            <p style='font-size: 14px; color: #888;'>Cordialement,<br/>L'équipe de recrutement</p>
+        </div>
+    </body>
+    </html>";
+
+            // Send the rejection email
+            await _emailService.SendEmailAsync(candidateEmail, "Job Application Rejected", emailBody);
+
+            return Ok("Candidate rejected and email sent.");
+        }
+
+
+
         [HttpGet("job-application/{jobApplicationId}/candidates")]
         public async Task<ActionResult<IEnumerable<object>>> GetCandidatesByJobApplicationId(int jobApplicationId)
         {
