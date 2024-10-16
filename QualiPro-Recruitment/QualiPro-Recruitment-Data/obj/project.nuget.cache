@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k/HzXtovGGbQuKjgAFbvWX1K3u0zunjFrMIrbGYVmVIAI107jPcAynmnXBH6IBwSJrehXvwN6nQ1KpwXHPuLAA==",
+  "dgSpecHash": "tPL2ltNdFYpnnsQUS5Yp9/6swRa7FaNRUkpecKHxLa+AitBZGoYhyZifZBMuuDhHTmidfo0ojVosVXtcgC2RsA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\PfERecrutement\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\QualiPro-Recruitment-Data.csproj",
+  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\QualiPro-Recruitment-Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
@@ -87,7 +87,7 @@
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.text.encoding.codepages\\6.0.0\\system.text.encoding.codepages.6.0.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\system.text.json\\8.0.5\\system.text.json.8.0.5.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.threading.channels\\6.0.0\\system.threading.channels.6.0.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"

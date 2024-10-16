@@ -6,7 +6,10 @@
     "\\QualiPro-Recruitment",
     "\\QualiPro-Recruitment\\QualiPro-Recruitment-Data",
     "\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\Models",
-    "\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\obj"
+    "\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\obj",
+    "\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api",
+    "\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Controllers"
   ],
+  "SelectedNode": "\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\appsettings.Development.json",
   "PreviewInSolutionExplorer": false
 }

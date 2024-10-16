@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\QualiPro-Recruitment-Web-Api",
-    "\\QualiPro-Recruitment-Web-Api\\Models"
+    "\\QualiPro-Recruitment-Web-Api\\Models",
+    "\\QualiPro-Recruitment-Web-Api\\Repositories",
+    "\\QualiPro-Recruitment-Web-Api\\Repositories\\JobApplicationRepo"
   ],
-  "SelectedNode": "\\QualiPro-Recruitment.sln",
+  "SelectedNode": "\\QualiPro-Recruitment-Web-Api\\Repositories\\JobApplicationRepo\\JobApplicationRepository.cs",
   "PreviewInSolutionExplorer": false
 }

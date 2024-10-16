@@ -18,7 +18,8 @@
           "Newtonsoft.Json": "13.0.3",
           "QualiPro-Recruitment-Data": "1.0.0",
           "Swashbuckle.AspNetCore": "6.4.0",
-          "System.IdentityModel.Tokens.Jwt": "7.6.2"
+          "System.IdentityModel.Tokens.Jwt": "7.6.2",
+          "System.Text.Json": "8.0.5"
         },
         "runtime": {
           "QualiPro-Recruitment-Web-Api.dll": {}
@@ -54,7 +55,7 @@
           "System.Memory.Data": "1.0.2",
           "System.Numerics.Vectors": "4.5.0",
           "System.Text.Encodings.Web": "8.0.0",
-          "System.Text.Json": "8.0.0",
+          "System.Text.Json": "8.0.5",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "runtime": {
@@ -71,7 +72,7 @@
           "Microsoft.Identity.Client.Extensions.Msal": "4.56.0",
           "System.Memory": "4.5.4",
           "System.Security.Cryptography.ProtectedData": "6.0.0",
-          "System.Text.Json": "8.0.0",
+          "System.Text.Json": "8.0.5",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "runtime": {
@@ -558,7 +559,7 @@
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "8.0.0",
           "Microsoft.Extensions.FileProviders.Abstractions": "8.0.0",
-          "System.Text.Json": "8.0.0"
+          "System.Text.Json": "8.0.5"
         }
       },
       "Microsoft.Extensions.DependencyInjection/8.0.0": {
@@ -570,7 +571,7 @@
       "Microsoft.Extensions.DependencyModel/8.0.0": {
         "dependencies": {
           "System.Text.Encodings.Web": "8.0.0",
-          "System.Text.Json": "8.0.0"
+          "System.Text.Json": "8.0.5"
         },
         "runtime": {
           "lib/net8.0/Microsoft.Extensions.DependencyModel.dll": {
@@ -959,7 +960,7 @@
       "System.Memory.Data/1.0.2": {
         "dependencies": {
           "System.Text.Encodings.Web": "8.0.0",
-          "System.Text.Json": "8.0.0"
+          "System.Text.Json": "8.0.5"
         },
         "runtime": {
           "lib/netstandard2.0/System.Memory.Data.dll": {
@@ -1040,9 +1041,12 @@
         }
       },
       "System.Text.Encodings.Web/8.0.0": {},
-      "System.Text.Json/8.0.0": {
-        "dependencies": {
-          "System.Text.Encodings.Web": "8.0.0"
+      "System.Text.Json/8.0.5": {
+        "runtime": {
+          "lib/net8.0/System.Text.Json.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.1024.46610"
+          }
         }
       },
       "System.Threading.Channels/6.0.0": {},
@@ -1072,7 +1076,8 @@
           "Microsoft.EntityFrameworkCore": "8.0.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.2",
           "Microsoft.Extensions.Configuration.Binder": "8.0.1",
-          "Microsoft.Extensions.Configuration.Json": "8.0.0"
+          "Microsoft.Extensions.Configuration.Json": "8.0.0",
+          "System.Text.Json": "8.0.5"
         },
         "runtime": {
           "QualiPro-Recruitment-Data.dll": {}
@@ -1730,12 +1735,12 @@
       "path": "system.text.encodings.web/8.0.0",
       "hashPath": "system.text.encodings.web.8.0.0.nupkg.sha512"
     },
-    "System.Text.Json/8.0.0": {
+    "System.Text.Json/8.0.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-OdrZO2WjkiEG6ajEFRABTRCi/wuXQPxeV6g8xvUJqdxMvvuCCEk86zPla8UiIQJz3durtUEbNyY/3lIhS0yZvQ==",
-      "path": "system.text.json/8.0.0",
-      "hashPath": "system.text.json.8.0.0.nupkg.sha512"
+      "sha512": "sha512-0f1B50Ss7rqxXiaBJyzUu9bWFOO2/zSlifZ/UNMdiIpDYe4cY4LQQicP4nirK1OS31I43rn062UIJ1Q9bpmHpg==",
+      "path": "system.text.json/8.0.5",
+      "hashPath": "system.text.json.8.0.5.nupkg.sha512"
     },
     "System.Threading.Channels/6.0.0": {
       "type": "package",

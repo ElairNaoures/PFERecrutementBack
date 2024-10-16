@@ -1653,11 +1653,8 @@
           }
         }
       },
-      "System.Text.Json/8.0.0": {
+      "System.Text.Json/8.0.5": {
         "type": "package",
-        "dependencies": {
-          "System.Text.Encodings.Web": "8.0.0"
-        },
         "compile": {
           "lib/net8.0/System.Text.Json.dll": {
             "related": ".xml"
@@ -4505,10 +4502,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Text.Json/8.0.0": {
-      "sha512": "OdrZO2WjkiEG6ajEFRABTRCi/wuXQPxeV6g8xvUJqdxMvvuCCEk86zPla8UiIQJz3durtUEbNyY/3lIhS0yZvQ==",
+    "System.Text.Json/8.0.5": {
+      "sha512": "0f1B50Ss7rqxXiaBJyzUu9bWFOO2/zSlifZ/UNMdiIpDYe4cY4LQQicP4nirK1OS31I43rn062UIJ1Q9bpmHpg==",
       "type": "package",
-      "path": "system.text.json/8.0.0",
+      "path": "system.text.json/8.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4573,7 +4570,7 @@
         "lib/net8.0/System.Text.Json.xml",
         "lib/netstandard2.0/System.Text.Json.dll",
         "lib/netstandard2.0/System.Text.Json.xml",
-        "system.text.json.8.0.0.nupkg.sha512",
+        "system.text.json.8.0.5.nupkg.sha512",
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -4674,7 +4671,8 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.2",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.2",
       "Microsoft.Extensions.Configuration.Binder >= 8.0.1",
-      "Microsoft.Extensions.Configuration.Json >= 8.0.0"
+      "Microsoft.Extensions.Configuration.Json >= 8.0.0",
+      "System.Text.Json >= 8.0.5"
     ]
   },
   "packageFolders": {
@@ -4683,11 +4681,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\PfERecrutement\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\QualiPro-Recruitment-Data.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\QualiPro-Recruitment-Data.csproj",
       "projectName": "QualiPro-Recruitment-Data",
-      "projectPath": "C:\\Users\\LENOVO\\Desktop\\PfERecrutement\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\QualiPro-Recruitment-Data.csproj",
+      "projectPath": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\QualiPro-Recruitment-Data.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO\\Desktop\\PfERecrutement\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\obj\\",
+      "outputPath": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4752,6 +4750,10 @@
           "Microsoft.Extensions.Configuration.Json": {
             "target": "Package",
             "version": "[8.0.0, )"
+          },
+          "System.Text.Json": {
+            "target": "Package",
+            "version": "[8.0.5, )"
           }
         },
         "imports": [

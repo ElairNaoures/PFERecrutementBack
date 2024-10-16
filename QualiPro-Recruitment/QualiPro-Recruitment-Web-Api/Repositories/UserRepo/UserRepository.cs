@@ -152,5 +152,14 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.UserRepo
             // Here you can add code to actually move the file to the desired folder
             return fileName;
         }
+        public async Task<string> GetRoleNameById(int roleId)
+        {
+            var role = await _qualiProContext.TabRoles.FindAsync(roleId);
+            if (role == null)
+            {
+                throw new Exception("Role not found");
+            }
+            return role.RoleName;
+        }
     }
 }

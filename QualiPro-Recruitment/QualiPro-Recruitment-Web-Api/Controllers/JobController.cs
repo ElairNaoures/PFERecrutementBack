@@ -4,6 +4,7 @@ using QualiPro_Recruitment_Data.Models;
 using QualiPro_Recruitment_Web_Api.DTOs;
 using QualiPro_Recruitment_Web_Api.Repositories.JobRepo;
 using QualiPro_Recruitment_Web_Api.Repositories.ModuleRepo;
+using QualiPro_Recruitment_Web_Api.Services;
 
 namespace QualiPro_Recruitment_Web_Api.Controllers
 {
@@ -14,11 +15,100 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
     {
 
         private readonly IJobRepository _jobRepository;
+        private readonly EmailService _emailService;
 
-        public JobController(IJobRepository jobRepository)
+        public JobController(IJobRepository jobRepository, EmailService emailService)
         {
             _jobRepository = jobRepository;
+            _emailService = emailService;
         }
+
+        //[HttpPost]
+        //public async Task<IActionResult> AddJob([FromBody] JobDto jobInput)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return BadRequest(ModelState);
+        //    }
+
+        //    try
+        //    {
+        //        TabJob job = await _jobRepository.AddJob(jobInput);
+        //        return Ok(job);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return StatusCode(500, "Internal server error: " + ex.Message);
+        //    }
+        //}
+
+
+
+        //[HttpPost]
+        //public async Task<IActionResult> AddJob([FromBody] JobDto jobInput)
+        //{
+        //    //if (!ModelState.IsValid)
+        //    //{
+        //    //    return BadRequest(ModelState);
+        //    //}
+
+        //    try
+        //    {
+        //        // Add the job
+        //        TabJob job = await _jobRepository.AddJob(jobInput);
+
+        //        // Check if a user is associated with the job
+        //        if (job.UserId.HasValue)
+        //        {
+        //            // Get user details by UserId
+        //            var user = await _jobRepository.GetUserById(job.UserId.Value);
+        //            if (user != null)
+        //            {
+        //                var email = user.TabAccounts.FirstOrDefault()?.Email; // Get the associated account's email
+        //                if (!string.IsNullOrEmpty(email))
+        //                {
+        //                    // Prepare the email body
+        //                    string emailSubject = "Affectation d'un nouveau job";
+        //                    string emailBody = $@"
+        //            <html>
+        //            <body>
+        //                <p>Bonjour {user.FirstName},</p>
+        //                <p>Un nouveau job vous a été affecté :</p>
+        //                <ul>
+        //                    <li><strong>Nom du job</strong> : {job.Title}</li>
+        //                    <li><strong>Description</strong> : {job.Description}</li>
+        //                </ul>
+        //                <p>Merci de vérifier les détails et de commencer à travailler sur ce job.</p>
+        //                <p>Cordialement,</p>
+        //                <p>L'équipe QualiPro</p>
+        //            </body>
+        //            </html>";
+
+        //                    // Send the email
+        //                    await _emailService.SendEmailAsync(email, emailSubject, emailBody);
+        //                }
+        //                else
+        //                {
+        //                    return BadRequest("L'utilisateur n'a pas d'adresse e-mail associée.");
+        //                }
+        //            }
+        //            else
+        //            {
+        //                return BadRequest("Aucun utilisateur trouvé avec cet ID.");
+        //            }
+        //        }
+        //        else
+        //        {
+        //            return BadRequest("Aucun utilisateur n'est associé à ce job.");
+        //        }
+
+        //        return Ok(job);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return StatusCode(500, "Erreur interne du serveur : " + ex.Message);
+        //    }
+        //}
 
         [HttpPost]
         public async Task<IActionResult> AddJob([FromBody] JobDto jobInput)
@@ -30,18 +120,62 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
 
             try
             {
+                // Add the job
                 TabJob job = await _jobRepository.AddJob(jobInput);
+
+                // Check if a user is associated with the job
+                if (job.UserId.HasValue)
+                {
+                    // Get user details by UserId
+                    var user = await _jobRepository.GetUserById(job.UserId.Value);
+                    if (user != null)
+                    {
+                        var email = user.TabAccounts.FirstOrDefault()?.Email; // Get the associated account's email
+                        if (!string.IsNullOrEmpty(email))
+                        {
+                            // Prepare the email body
+                            string emailSubject = "Affectation d'un nouveau job";
+                            string emailBody = $@"
+                    <html>
+                    <body>
+                        <p>Bonjour {user.FirstName},</p>
+                        <p>Un nouveau job vous a été affecté :</p>
+                        <ul>
+                            <li><strong>Nom du job</strong> : {job.Title}</li>
+                            <li><strong>Description</strong> : {job.Description}</li>
+                        </ul>
+                        <p>Merci de vérifier les détails et de commencer à travailler sur ce job.</p>
+                        <p>Cordialement,</p>
+                        <p>L'équipe QualiPro</p>
+                    </body>
+                    </html>";
+
+                            // Send the email
+                            await _emailService.SendEmailAsync(email, emailSubject, emailBody);
+                        }
+                        else
+                        {
+                            return BadRequest("L'utilisateur n'a pas d'adresse e-mail associée.");
+                        }
+                    }
+                    else
+                    {
+                        return BadRequest("Aucun utilisateur trouvé avec cet ID.");
+                    }
+                }
+                else
+                {
+                    return BadRequest("Aucun utilisateur n'est associé à ce job.");
+                }
+
                 return Ok(job);
             }
             catch (Exception ex)
             {
-                return StatusCode(500, "Internal server error: " + ex.Message);
+                // Consider logging the exception here for better debugging
+                return StatusCode(500, "Erreur interne du serveur : " + ex.Message);
             }
         }
-
-
-
-
 
         [HttpGet]
         public async Task<IActionResult> GetAllJobs()

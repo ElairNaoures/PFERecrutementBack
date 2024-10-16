@@ -19,13 +19,15 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
     {
         private readonly IAuthRepository _authRepository;
         private readonly IUserRepository _userRepository;
+        private readonly EmailService _emailService;
 
 
 
-        public AuthController(IAuthRepository authRepository, IUserRepository userRepository)
+        public AuthController(IAuthRepository authRepository, IUserRepository userRepository, EmailService emailService)
         {
             _authRepository = authRepository;
             _userRepository = userRepository;
+            _emailService = emailService;
         }
 
         [HttpPost("sign-in")]
@@ -82,18 +84,120 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
         //    }
         //}
 
-        [HttpPost("sign-up")]
+        //[HttpPost("sign-up")]
 
+        //public async Task<IActionResult> SignUp(UserAccountRoleModel userAccountRoleModel)
+        //{
+        //    try
+        //    {
+        //        if (userAccountRoleModel != null && userAccountRoleModel.Email != null && userAccountRoleModel.Password != null)
+        //        {
+        //            AuthModel result = await _authRepository.SignUp(userAccountRoleModel);
+
+        //            if (result.Success == true && result.Success.Value && result.AccessToken != null && result.UserInfo != null)
+        //            {
+        //                return Ok(result);
+        //            }
+        //            else
+        //            {
+        //                return BadRequest(result);
+        //            }
+        //        }
+        //        return BadRequest();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest(ex.Message);
+        //    }
+        //}
+        [HttpPost("sign-up")]
         public async Task<IActionResult> SignUp(UserAccountRoleModel userAccountRoleModel)
         {
             try
             {
-                if (userAccountRoleModel != null && userAccountRoleModel.Email != null && userAccountRoleModel.Password != null)
+                if (userAccountRoleModel != null && !string.IsNullOrEmpty(userAccountRoleModel.Email) && !string.IsNullOrEmpty(userAccountRoleModel.Password))
                 {
+                    // Call the repository to sign up the user
                     AuthModel result = await _authRepository.SignUp(userAccountRoleModel);
 
-                    if (result.Success == true && result.Success.Value && result.AccessToken != null && result.UserInfo != null)
+                    if (result.Success == true && result.AccessToken != null && result.UserInfo != null)
                     {
+                        // Récupérer le nom du rôle à partir du RoleId
+                        string roleName = await _authRepository.GetRoleNameById(userAccountRoleModel.RoleId.Value);
+
+                        // Send confirmation email to the user
+                        string emailSubject = "Nouvelle Compte Créée";
+                        string emailBody = $@"
+    <html>
+      <head>
+        <style>
+          body {{
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+          }}
+          .container {{
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          }}
+          .header {{
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+          }}
+          .header img {{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+          }}
+          .content {{
+            padding: 20px;
+          }}
+          .button {{
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }}
+          .button:hover {{
+            background-color: #3e8e41;
+          }}
+        </style>
+      </head>
+      <body>
+        <div class=""container"">
+          <div class=""header"">
+            <h2>Nouvelle Compte Créée</h2>
+          </div>
+          <div class=""content"">
+            <p>Bonjour {userAccountRoleModel.FirstName},</p>
+            <p> une nouvelle compte a ete cree pour vous.</p>
+            <p>Vos informations de connexion sont les suivantes :</p>
+            <ul>
+              <li>Adresse e-mail : {userAccountRoleModel.Email}</li>
+              <li>Mot de passe : {userAccountRoleModel.Password}</li>
+              <li>Votre rôle : {roleName}</li>
+            </ul>
+            <p>Veuillez noter que votre mot de passe est sensible à la casse.</p>
+            <p>Vous pouvez maintenant vous connecter à votre compte avec ces informations.</p>
+            <p>Cordialement,</p>
+            <p>L'équipe QualiPro</p>
+            <p><a href=""http://localhost:4200/auth/admin/sign-in"" class=""button"">Se connecter à votre compte</a></p>
+          </div>
+        </div>
+      </body>
+    </html>
+    ";
+
+                        await _emailService.SendEmailAsync(userAccountRoleModel.Email, emailSubject, emailBody);
+
+                        // Return the result if everything is successful
                         return Ok(result);
                     }
                     else
@@ -101,7 +205,7 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
                         return BadRequest(result);
                     }
                 }
-                return BadRequest();
+                return BadRequest("Invalid signup information.");
             }
             catch (Exception ex)
             {
@@ -297,7 +401,34 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
             }
         }
 
+
+
+        [HttpGet("role/{roleId}")]
+        public async Task<IActionResult> GetRoleNameById(int roleId)
+        {
+            try
+            {
+                // Call the method to get the role name by role ID
+                var roleName = await _authRepository.GetRoleNameById(roleId);
+
+                // Check if the role name exists
+                if (string.IsNullOrEmpty(roleName))
+                {
+                    return NotFound("Role not found.");
+                }
+
+                return Ok(new { RoleName = roleName });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
     }
+
+
+
 
 }
 

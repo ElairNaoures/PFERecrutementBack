@@ -1809,11 +1809,8 @@
           }
         }
       },
-      "System.Text.Json/8.0.0": {
+      "System.Text.Json/8.0.5": {
         "type": "package",
-        "dependencies": {
-          "System.Text.Encodings.Web": "8.0.0"
-        },
         "compile": {
           "lib/net8.0/System.Text.Json.dll": {
             "related": ".xml"
@@ -1883,7 +1880,8 @@
           "Microsoft.EntityFrameworkCore": "8.0.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.2",
           "Microsoft.Extensions.Configuration.Binder": "8.0.1",
-          "Microsoft.Extensions.Configuration.Json": "8.0.0"
+          "Microsoft.Extensions.Configuration.Json": "8.0.0",
+          "System.Text.Json": "8.0.5"
         },
         "compile": {
           "bin/placeholder/QualiPro-Recruitment-Data.dll": {}
@@ -4967,10 +4965,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Text.Json/8.0.0": {
-      "sha512": "OdrZO2WjkiEG6ajEFRABTRCi/wuXQPxeV6g8xvUJqdxMvvuCCEk86zPla8UiIQJz3durtUEbNyY/3lIhS0yZvQ==",
+    "System.Text.Json/8.0.5": {
+      "sha512": "0f1B50Ss7rqxXiaBJyzUu9bWFOO2/zSlifZ/UNMdiIpDYe4cY4LQQicP4nirK1OS31I43rn062UIJ1Q9bpmHpg==",
       "type": "package",
-      "path": "system.text.json/8.0.0",
+      "path": "system.text.json/8.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5035,7 +5033,7 @@
         "lib/net8.0/System.Text.Json.xml",
         "lib/netstandard2.0/System.Text.Json.dll",
         "lib/netstandard2.0/System.Text.Json.xml",
-        "system.text.json.8.0.0.nupkg.sha512",
+        "system.text.json.8.0.5.nupkg.sha512",
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -5145,7 +5143,8 @@
       "Newtonsoft.Json >= 13.0.3",
       "QualiPro-Recruitment-Data >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0",
-      "System.IdentityModel.Tokens.Jwt >= 7.6.2"
+      "System.IdentityModel.Tokens.Jwt >= 7.6.2",
+      "System.Text.Json >= 8.0.5"
     ]
   },
   "packageFolders": {
@@ -5154,11 +5153,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\PfERecrutement\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj",
       "projectName": "QualiPro-Recruitment-Web-Api",
-      "projectPath": "C:\\Users\\LENOVO\\Desktop\\PfERecrutement\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj",
+      "projectPath": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO\\Desktop\\PfERecrutement\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\obj\\",
+      "outputPath": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5175,8 +5174,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\LENOVO\\Desktop\\PfERecrutement\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\QualiPro-Recruitment-Data.csproj": {
-              "projectPath": "C:\\Users\\LENOVO\\Desktop\\PfERecrutement\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\QualiPro-Recruitment-Data.csproj"
+            "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\QualiPro-Recruitment-Data.csproj": {
+              "projectPath": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\QualiPro-Recruitment-Data.csproj"
             }
           }
         }
@@ -5237,6 +5236,10 @@
           "System.IdentityModel.Tokens.Jwt": {
             "target": "Package",
             "version": "[7.6.2, )"
+          },
+          "System.Text.Json": {
+            "target": "Package",
+            "version": "[8.0.5, )"
           }
         },
         "imports": [

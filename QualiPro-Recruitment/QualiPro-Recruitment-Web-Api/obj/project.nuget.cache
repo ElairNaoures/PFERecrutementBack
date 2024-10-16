@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7eulNOGbW5GOFl6UtVlsIgDIf6q958z4Mn79Vt7TXpVEf4lsDaZuy7js0/ZI5UVFhn/CThW+I2W3LWhtGqCzyA==",
+  "dgSpecHash": "uJC5INyc0syC8INPjDy1lYYtCtV+WIGVwofckO+jqZ3MngDL2/2ay8KCkfayfu8DwJkA43h5XIS57ihIbA2T4Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\PfERecrutement\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj",
+  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
@@ -96,7 +96,7 @@
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.text.encoding.codepages\\6.0.0\\system.text.encoding.codepages.6.0.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\system.text.json\\8.0.5\\system.text.json.8.0.5.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.threading.channels\\6.0.0\\system.threading.channels.6.0.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"

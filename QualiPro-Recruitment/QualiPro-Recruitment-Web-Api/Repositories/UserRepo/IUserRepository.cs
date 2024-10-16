@@ -17,5 +17,6 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.UserRepo
 
         Task UpdateUser(UserDTO UserDTO );
         Task<bool> DeleteUser(int userId);
+        Task<string> GetRoleNameById(int roleId);
     }
 }

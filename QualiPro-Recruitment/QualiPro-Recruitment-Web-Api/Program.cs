@@ -21,13 +21,17 @@ using QualiPro_Recruitment_Web_Api.Repositories.QuizRepo;
 using QualiPro_Recruitment_Web_Api.Repositories.RoleRepo;
 using QualiPro_Recruitment_Web_Api.Repositories.SkillRepo;
 using QualiPro_Recruitment_Web_Api.Repositories.UserRepo;
+using QualiPro_Recruitment_Web_Api.Services;
 using System.Text;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IRoleRepository, RoleRepository>();
+builder.Services.AddScoped<EmailService>();
+
 builder.Services.AddScoped<IModuleRepository, ModuleRepository>();
 builder.Services.AddScoped<ICompteRepository, CompteRepository>();
 builder.Services.AddScoped<IAuthRepository, AuthRepository>();
@@ -57,6 +61,16 @@ builder.Services.AddDbContext<QualiProContext>();
 
 
 builder.Services.AddControllers();
+//builder.Services.AddControllers()
+//    .AddJsonOptions(options =>
+//    {
+//        options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve;
+//        options.JsonSerializerOptions.DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull;
+//        options.JsonSerializerOptions.WriteIndented = true; // Optional: For better readability
+//    });
+
+
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

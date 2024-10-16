@@ -21,6 +21,27 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.JobRepo
         }
 
 
+        //public async Task<TabJob> AddJob(JobDto jobInput)
+        //{
+        //    TabJob job = new TabJob
+        //    {
+        //        Title = jobInput.Title,
+        //        Description = jobInput.Description,
+        //        YearsOfExperience = jobInput.YearsOfExperience,
+        //        Languages = jobInput.Languages,
+        //        EducationLevel = jobInput.EducationLevel,
+        //        ContractTypeId = jobInput.ContractTypeId,
+        //        ExpirationDate = jobInput.ExpirationDate,
+        //        CreatedAt = DateTime.Now,
+        //        UserId = jobInput.UserId,
+        //        JobProfileId = jobInput.JobProfileId
+        //    };
+
+        //    await _qualiProContext.AddAsync(job);
+        //    await _qualiProContext.SaveChangesAsync();
+        //    return job;
+        //}
+
         public async Task<TabJob> AddJob(JobDto jobInput)
         {
             TabJob job = new TabJob
@@ -32,7 +53,7 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.JobRepo
                 EducationLevel = jobInput.EducationLevel,
                 ContractTypeId = jobInput.ContractTypeId,
                 ExpirationDate = jobInput.ExpirationDate,
-                CreatedAt = DateTime.Now,
+                CreatedAt = DateTime.UtcNow, // Ensure this is in UTC
                 UserId = jobInput.UserId,
                 JobProfileId = jobInput.JobProfileId
             };
@@ -41,7 +62,6 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.JobRepo
             await _qualiProContext.SaveChangesAsync();
             return job;
         }
-
 
         public async Task<List<TabJob>> GetAllJobs()
         {
@@ -128,6 +148,21 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.JobRepo
                 .Where(job => job.JobProfileId == profileId && (job.Deleted == false || job.Deleted == null))
                 .ToList();
         }
+
+        public async Task<TabUser> GetUserById(int userId)
+        {
+            return await _qualiProContext.TabUsers
+                .Include(u => u.TabAccounts)
+                .FirstOrDefaultAsync(u => u.Id == userId);
+        }
+
+        public async Task<string?> GetUserEmailById(int userId)
+        {
+            var user = await GetUserById(userId);
+            var account = user.TabAccounts.FirstOrDefault(); 
+            return account?.Email; 
+        }
+
 
 
     }

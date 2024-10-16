@@ -23,7 +23,7 @@ public partial class TabJob
 
     public DateTime? ExpirationDate { get; set; }
 
-    public DateTime? CreatedAt { get; set; }
+    public DateTime? CreatedAt { get; set; } = DateTime.UtcNow;
 
     public int? JobProfileId { get; set; }
 

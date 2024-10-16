@@ -16,5 +16,8 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.JobRepo
 
         Task<IEnumerable<TabJob>> GetJobsByProfile(string profileName);
         IEnumerable<TabJob> GetJobsByProfileId(int profileId);
+        Task<TabUser> GetUserById(int userId);
+        Task<string?> GetUserEmailById(int userId);
+
     }
 }
