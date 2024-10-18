@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2C930276-F7DE-4D74-922C-FDAAE5A50A34}|QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj|c:\\users\\lenovo\\desktop\\projectpfe\\pferecrutementback\\qualipro-recruitment\\qualipro-recruitment-web-api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C930276-F7DE-4D74-922C-FDAAE5A50A34}|QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj|solutionrelative:qualipro-recruitment-web-api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C930276-F7DE-4D74-922C-FDAAE5A50A34}|QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj|c:\\users\\lenovo\\desktop\\projectpfe\\pferecrutementback\\qualipro-recruitment\\qualipro-recruitment-web-api\\repositories\\authrepo\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C930276-F7DE-4D74-922C-FDAAE5A50A34}|QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj|solutionrelative:qualipro-recruitment-web-api\\repositories\\authrepo\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2C930276-F7DE-4D74-922C-FDAAE5A50A34}|QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj|c:\\users\\lenovo\\desktop\\projectpfe\\pferecrutementback\\qualipro-recruitment\\qualipro-recruitment-web-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C930276-F7DE-4D74-922C-FDAAE5A50A34}|QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj|solutionrelative:qualipro-recruitment-web-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -113,10 +121,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2C930276-F7DE-4D74-922C-FDAAE5A50A34}|QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj|c:\\users\\lenovo\\desktop\\projectpfe\\pferecrutementback\\qualipro-recruitment\\qualipro-recruitment-web-api\\repositories\\skillrepo\\iskillrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C930276-F7DE-4D74-922C-FDAAE5A50A34}|QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj|solutionrelative:qualipro-recruitment-web-api\\repositories\\skillrepo\\iskillrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C930276-F7DE-4D74-922C-FDAAE5A50A34}|QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj|c:\\users\\lenovo\\desktop\\projectpfe\\pferecrutementback\\qualipro-recruitment\\qualipro-recruitment-web-api\\repositories\\authrepo\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C930276-F7DE-4D74-922C-FDAAE5A50A34}|QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj|solutionrelative:qualipro-recruitment-web-api\\repositories\\authrepo\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C930276-F7DE-4D74-922C-FDAAE5A50A34}|QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj|c:\\users\\lenovo\\desktop\\projectpfe\\pferecrutementback\\qualipro-recruitment\\qualipro-recruitment-web-api\\repositories\\condidatrepo\\condidatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -370,11 +374,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "JobRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\JobRepo\\JobRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\JobRepo\\JobRepository.cs",
@@ -383,12 +387,11 @@
               "ViewState": "AQIAACkAAAAAAAAAAAAswEAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-29T09:14:05.193Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "JobController.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Controllers\\JobController.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Controllers\\JobController.cs",
@@ -397,12 +400,11 @@
               "ViewState": "AQIAAG0AAAAAAAAAAAAgwHEAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-29T09:35:26.089Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "TabUser.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\Models\\TabUser.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Data\\Models\\TabUser.cs",
@@ -411,38 +413,24 @@
               "ViewState": "AQIAABIAAAAAAAAAAAAmwB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-16T17:37:21.477Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "JobApplicationRepository.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\JobApplicationRepo\\JobApplicationRepository.cs",
-              "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\JobApplicationRepo\\JobApplicationRepository.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\JobApplicationRepo\\JobApplicationRepository.cs",
-              "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\JobApplicationRepo\\JobApplicationRepository.cs",
-              "ViewState": "AQIAAIYAAAAAAAAAAAAiwJMAAABSAAAA",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAJIBAAAAAAAAAAAswJsBAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T14:30:50.715Z",
+              "WhenOpened": "2024-10-17T20:40:25.561Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "JobApplicationController.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Controllers\\JobApplicationController.cs",
-              "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Controllers\\JobApplicationController.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Controllers\\JobApplicationController.cs",
-              "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Controllers\\JobApplicationController.cs",
-              "ViewState": "AQIAAIwCAAAAAAAAAAAAAKECAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T00:29:42.453Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "IJobApplicationRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\JobApplicationRepo\\IJobApplicationRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\JobApplicationRepo\\IJobApplicationRepository.cs",
@@ -450,12 +438,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\JobApplicationRepo\\IJobApplicationRepository.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAIwBwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T19:13:24.887Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T19:13:24.887Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "JobDto.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\DTOs\\JobDto.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\DTOs\\JobDto.cs",
@@ -463,25 +450,61 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\DTOs\\JobDto.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAAswBcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T13:17:34.352Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T13:17:34.352Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Program.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Program.cs",
               "ToolTip": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Program.cs",
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Program.cs",
-              "ViewState": "AQIAAFcAAAAAAAAAAAAAAD4AAAAiAAAA",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAAAD4AAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-16T18:14:54.133Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
+              "Title": "JobApplicationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\JobApplicationRepo\\JobApplicationRepository.cs",
+              "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\JobApplicationRepo\\JobApplicationRepository.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\JobApplicationRepo\\JobApplicationRepository.cs",
+              "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\JobApplicationRepo\\JobApplicationRepository.cs",
+              "ViewState": "AQIAAIYAAAAAAAAAAAAiwJMAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T14:30:50.715Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthRepository.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\AuthRepo\\AuthRepository.cs",
+              "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\AuthRepo\\AuthRepository.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\AuthRepo\\AuthRepository.cs",
+              "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\AuthRepo\\AuthRepository.cs",
+              "ViewState": "AQIAAFsCAAAAAAAAAAAswHECAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T12:59:59.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "JobApplicationController.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Controllers\\JobApplicationController.cs",
+              "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Controllers\\JobApplicationController.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Controllers\\JobApplicationController.cs",
+              "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Controllers\\JobApplicationController.cs",
+              "ViewState": "AQIAAIwCAAAAAAAAAAAAAKECAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T00:29:42.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "CondidatController.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Controllers\\CondidatController.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Controllers\\CondidatController.cs",
@@ -489,12 +512,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Controllers\\CondidatController.cs",
               "ViewState": "AQIAAB0AAAAAAAAAAAAkwGoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T10:48:26.087Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-22T10:48:26.087Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "TabCondidat.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\Models\\TabCondidat.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Data\\Models\\TabCondidat.cs",
@@ -502,12 +524,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Data\\Models\\TabCondidat.cs",
               "ViewState": "AQIAAAQAAAAAAAAAAAAiwCMAAABvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T10:38:47.348Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-22T10:38:47.348Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "IJobRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\JobRepo\\IJobRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\JobRepo\\IJobRepository.cs",
@@ -515,12 +536,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\JobRepo\\IJobRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T09:42:11.476Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T09:42:11.476Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "CondidatDto.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\DTOs\\CondidatDto.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\DTOs\\CondidatDto.cs",
@@ -528,12 +548,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\DTOs\\CondidatDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T10:52:22.956Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-22T10:52:22.956Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "TabQuiz.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\Models\\TabQuiz.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Data\\Models\\TabQuiz.cs",
@@ -541,12 +560,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Data\\Models\\TabQuiz.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAqwAUAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T10:38:51.989Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-12T10:38:51.989Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "TabProfileJob.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\Models\\TabProfileJob.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Data\\Models\\TabProfileJob.cs",
@@ -554,12 +572,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Data\\Models\\TabProfileJob.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T10:45:25.778Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-12T10:45:25.778Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "TabModuleRole.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\Models\\TabModuleRole.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Data\\Models\\TabModuleRole.cs",
@@ -567,12 +584,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Data\\Models\\TabModuleRole.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAQwAkAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T20:13:32.861Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-17T20:13:32.861Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "TabModule.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\Models\\TabModule.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Data\\Models\\TabModule.cs",
@@ -580,12 +596,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Data\\Models\\TabModule.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T08:06:45.528Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-17T08:06:45.528Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "TabEducation.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\Models\\TabEducation.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Data\\Models\\TabEducation.cs",
@@ -593,12 +608,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Data\\Models\\TabEducation.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAA8wBEAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T13:02:20.285Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-22T13:02:20.285Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "TabContractType.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\Models\\TabContractType.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Data\\Models\\TabContractType.cs",
@@ -606,12 +620,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Data\\Models\\TabContractType.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T09:55:28.218Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T09:55:28.218Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "TabAccountCondidat.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\Models\\TabAccountCondidat.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Data\\Models\\TabAccountCondidat.cs",
@@ -619,12 +632,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Data\\Models\\TabAccountCondidat.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAUAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T10:54:05.191Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-05T10:54:05.191Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "TabAccount.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\Models\\TabAccount.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Data\\Models\\TabAccount.cs",
@@ -632,12 +644,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Data\\Models\\TabAccount.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAqwAUAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T08:10:23.12Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-17T08:10:23.12Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "ProfessionalExperience.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\Models\\ProfessionalExperience.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Data\\Models\\ProfessionalExperience.cs",
@@ -645,12 +656,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Data\\Models\\ProfessionalExperience.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAAwBEAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T11:13:42.896Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-22T11:13:42.896Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "Notification.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\Models\\Notification.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Data\\Models\\Notification.cs",
@@ -658,12 +668,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Data\\Models\\Notification.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAABQwBEAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T14:28:58.248Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-16T14:28:58.248Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "IQuestionOptionRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\QuestionOptionRepo\\IQuestionOptionRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\QuestionOptionRepo\\IQuestionOptionRepository.cs",
@@ -671,12 +680,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\QuestionOptionRepo\\IQuestionOptionRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T18:08:32.27Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T18:08:32.27Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "IQuestionRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\QuestionRepo\\IQuestionRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\QuestionRepo\\IQuestionRepository.cs",
@@ -684,12 +692,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\QuestionRepo\\IQuestionRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T17:57:09.762Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T17:57:09.762Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "IQuizEvaluationRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\QuizEvaluationRepo\\IQuizEvaluationRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\QuizEvaluationRepo\\IQuizEvaluationRepository.cs",
@@ -697,12 +704,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\QuizEvaluationRepo\\IQuizEvaluationRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAIBJwBEAAABsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T18:48:01.769Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T18:48:01.769Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "IQuizRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\QuizRepo\\IQuizRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\QuizRepo\\IQuizRepository.cs",
@@ -710,12 +716,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\QuizRepo\\IQuizRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwA0AAABTAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T11:01:56.997Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-12T11:01:56.997Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "IProfileJobRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\ProfileJobRepo\\IProfileJobRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\ProfileJobRepo\\IProfileJobRepository.cs",
@@ -723,12 +728,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\ProfileJobRepo\\IProfileJobRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T17:35:43.267Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T17:35:43.267Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "ISkillRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\SkillRepo\\ISkillRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\SkillRepo\\ISkillRepository.cs",
@@ -736,25 +740,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\SkillRepo\\ISkillRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T10:25:30.807Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-08T10:25:30.807Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "AuthRepository.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\AuthRepo\\AuthRepository.cs",
-              "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\AuthRepo\\AuthRepository.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\AuthRepo\\AuthRepository.cs",
-              "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\AuthRepo\\AuthRepository.cs",
-              "ViewState": "AQIAAGIAAAAAAAAAAIBJwHEAAABNAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T12:59:59.289Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "CondidatRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\CondidatRepo\\CondidatRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\CondidatRepo\\CondidatRepository.cs",
@@ -762,12 +752,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\CondidatRepo\\CondidatRepository.cs",
               "ViewState": "AQIAAEsAAAAAAAAAAAAswMYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T11:18:56.601Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-22T11:18:56.601Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "CompteRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\CompteRepo\\CompteRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\CompteRepo\\CompteRepository.cs",
@@ -775,12 +764,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\CompteRepo\\CompteRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAIBJwEQAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T08:11:55.816Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-17T08:11:55.816Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "ICompteRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\CompteRepo\\ICompteRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\CompteRepo\\ICompteRepository.cs",
@@ -788,12 +776,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\CompteRepo\\ICompteRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T08:41:57.443Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-17T08:41:57.443Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "AuthModel.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Models\\AuthModel.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Models\\AuthModel.cs",
@@ -801,12 +788,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Models\\AuthModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T13:02:05.721Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T13:02:05.721Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Controllers\\UserController.cs",
@@ -814,12 +800,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Controllers\\UserController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAIBJwBIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T18:06:45.016Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T18:06:45.016Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Controllers\\WeatherForecastController.cs",
@@ -827,12 +812,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Controllers\\WeatherForecastController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAIBJwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T14:26:57.014Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-22T14:26:57.014Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "EducationController.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Controllers\\EducationController.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Controllers\\EducationController.cs",
@@ -840,12 +824,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Controllers\\EducationController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAIBJwBEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T13:03:48.551Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-22T13:03:48.551Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "ContractTypeController.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Controllers\\ContractTypeController.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Controllers\\ContractTypeController.cs",
@@ -853,12 +836,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Controllers\\ContractTypeController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T10:11:33.901Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T10:11:33.901Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Controllers\\AccountController.cs",
@@ -866,12 +848,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Controllers\\AccountController.cs",
               "ViewState": "AQIAACwAAAAAAAAAAAAIwDgAAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T09:40:23.967Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-17T09:40:23.967Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "IAuthRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\AuthRepo\\IAuthRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\AuthRepo\\IAuthRepository.cs",
@@ -879,12 +860,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\AuthRepo\\IAuthRepository.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAxwAsAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T12:59:45.214Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T12:59:45.214Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "CondidatAccountRoleModel.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Models\\CondidatAccountRoleModel.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Models\\CondidatAccountRoleModel.cs",
@@ -892,12 +872,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Models\\CondidatAccountRoleModel.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAIwAQAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T10:59:18.101Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-05T10:59:18.101Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "UserAccountRoleModel.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Models\\UserAccountRoleModel.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Models\\UserAccountRoleModel.cs",
@@ -905,12 +884,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Models\\UserAccountRoleModel.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAxwAQAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T13:23:01.021Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T13:23:01.021Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "TokenModel.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Models\\TokenModel.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Models\\TokenModel.cs",
@@ -918,12 +896,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Models\\TokenModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T10:11:56.696Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-28T10:11:56.696Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "SignUpModel.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Models\\SignUpModel.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Models\\SignUpModel.cs",
@@ -931,12 +908,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Models\\SignUpModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T16:45:12.707Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-22T16:45:12.707Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "SignInModel.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Models\\SignInModel.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Models\\SignInModel.cs",
@@ -944,12 +920,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Models\\SignInModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T13:07:02.257Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T13:07:02.257Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "RegisterModel.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Models\\RegisterModel.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Models\\RegisterModel.cs",
@@ -957,12 +932,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Models\\RegisterModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T15:24:44.598Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-22T15:24:44.598Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "IProfessionalExperienceRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\ProfessionalExperienceRepo\\IProfessionalExperienceRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\ProfessionalExperienceRepo\\IProfessionalExperienceRepository.cs",
@@ -970,12 +944,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\ProfessionalExperienceRepo\\IProfessionalExperienceRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T18:41:34.331Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-03T18:41:34.331Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "IEducationRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\EducationRepo\\IEducationRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\EducationRepo\\IEducationRepository.cs",
@@ -983,12 +956,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\EducationRepo\\IEducationRepository.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAkwBAAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T13:38:44.379Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-22T13:38:44.379Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "ICondidatRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\CondidatRepo\\ICondidatRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\CondidatRepo\\ICondidatRepository.cs",
@@ -996,12 +968,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\CondidatRepo\\ICondidatRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T11:19:25.59Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-22T11:19:25.59Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "INotificationRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\NotificationRepo\\INotificationRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\NotificationRepo\\INotificationRepository.cs",
@@ -1009,12 +980,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\NotificationRepo\\INotificationRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T14:35:19.943Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-16T14:35:19.943Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "IContractTypeRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\ContraTypeRepo\\IContractTypeRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\ContraTypeRepo\\IContractTypeRepository.cs",
@@ -1022,12 +992,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\ContraTypeRepo\\IContractTypeRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T09:59:58.162Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T09:59:58.162Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "IRoleRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\RoleRepo\\IRoleRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\RoleRepo\\IRoleRepository.cs",
@@ -1035,12 +1004,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\RoleRepo\\IRoleRepository.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAArwAsAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T10:30:12.825Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-17T10:30:12.825Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "IModuleRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\ModuleRepo\\IModuleRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\ModuleRepo\\IModuleRepository.cs",
@@ -1048,12 +1016,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\ModuleRepo\\IModuleRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T20:15:18.372Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-17T20:15:18.372Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\UserRepo\\IUserRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\UserRepo\\IUserRepository.cs",
@@ -1061,12 +1028,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\UserRepo\\IUserRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAIBJwBMAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T17:35:58.035Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T17:35:58.035Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "TabSkill.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\Models\\TabSkill.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Data\\Models\\TabSkill.cs",
@@ -1074,12 +1040,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Data\\Models\\TabSkill.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAIBJwA8AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T11:16:04.482Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-03T11:16:04.482Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "TabRole.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\Models\\TabRole.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Data\\Models\\TabRole.cs",
@@ -1087,12 +1052,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Data\\Models\\TabRole.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T10:33:44.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-17T10:33:44.35Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\UserRepo\\UserRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\UserRepo\\UserRepository.cs",
@@ -1100,12 +1064,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\UserRepo\\UserRepository.cs",
               "ViewState": "AQIAAI4AAAAAAAAAAAAQwKIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T17:36:13.313Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T17:36:13.313Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "RoleRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\RoleRepo\\RoleRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\RoleRepo\\RoleRepository.cs",
@@ -1113,12 +1076,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\RoleRepo\\RoleRepository.cs",
               "ViewState": "AQIAAC8AAAAAAAAAAAAUwEMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T10:29:47.73Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-17T10:29:47.73Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "TokenService.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Services\\TokenService.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Services\\TokenService.cs",
@@ -1126,12 +1088,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Services\\TokenService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T18:34:19.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T18:34:19.262Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "EmailService.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Services\\EmailService.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Services\\EmailService.cs",
@@ -1139,12 +1100,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Services\\EmailService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T16:44:31.948Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T16:44:31.948Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "JobApplicationDto.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\DTOs\\JobApplicationDto.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\DTOs\\JobApplicationDto.cs",
@@ -1152,12 +1112,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\DTOs\\JobApplicationDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T19:12:17.009Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T19:12:17.009Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "JobApplicationInfoDto.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\DTOs\\JobApplicationInfoDto.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\DTOs\\JobApplicationInfoDto.cs",
@@ -1165,12 +1124,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\DTOs\\JobApplicationInfoDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-21T18:25:38.834Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-21T18:25:38.834Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 62,
               "Title": "QuizController.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Controllers\\QuizController.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Controllers\\QuizController.cs",
@@ -1178,12 +1136,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Controllers\\QuizController.cs",
               "ViewState": "AQIAAHgAAAAAAAAAAAAqwJwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T11:00:07.297Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-12T11:00:07.297Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 65,
               "Title": "QuestionDto.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\DTOs\\QuestionDto.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\DTOs\\QuestionDto.cs",
@@ -1191,12 +1148,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\DTOs\\QuestionDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAkAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T17:55:01Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T17:55:01Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 63,
               "Title": "QuestionRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\QuestionRepo\\QuestionRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\QuestionRepo\\QuestionRepository.cs",
@@ -1204,12 +1160,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\QuestionRepo\\QuestionRepository.cs",
               "ViewState": "AQIAAFwAAAAAAAAAAAAkwGcAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T17:57:38.637Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T17:57:38.637Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 64,
               "Title": "QuestionController.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Controllers\\QuestionController.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Controllers\\QuestionController.cs",
@@ -1217,12 +1172,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Controllers\\QuestionController.cs",
               "ViewState": "AQIAAMgAAAAAAAAAAAAwwN4AAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T17:55:57.661Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T17:55:57.661Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 67,
               "Title": "QualiPro-Recruitment-Web-Api.http",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.http",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.http",
@@ -1230,12 +1184,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.http",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-09-18T21:31:32.513Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-18T21:31:32.513Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 68,
               "Title": "NotificationController.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Controllers\\NotificationController.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Controllers\\NotificationController.cs",
@@ -1243,12 +1196,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Controllers\\NotificationController.cs",
               "ViewState": "AQIAADUAAAAAAAAAAAAqwE0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T10:35:14.412Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T10:35:14.412Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 66,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Properties\\launchSettings.json",
@@ -1256,12 +1208,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Properties\\launchSettings.json",
               "ViewState": "AQIAAAIAAAAAAAAAAMBdwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-19T16:55:10.492Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-19T16:55:10.492Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 69,
               "Title": "UserDTO.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\DTOs\\UserDTO.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\DTOs\\UserDTO.cs",
@@ -1269,12 +1220,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\DTOs\\UserDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T13:04:15.78Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T13:04:15.78Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 70,
               "Title": "NotificationRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\NotificationRepo\\NotificationRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\NotificationRepo\\NotificationRepository.cs",
@@ -1282,12 +1232,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\NotificationRepo\\NotificationRepository.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAAUwCYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T14:36:06.724Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-16T14:36:06.724Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 71,
               "Title": "QuizEvaluationController.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Controllers\\QuizEvaluationController.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Controllers\\QuizEvaluationController.cs",
@@ -1295,12 +1244,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Controllers\\QuizEvaluationController.cs",
               "ViewState": "AQIAACABAAAAAAAAAIBZwDsBAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T18:50:05.569Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T18:50:05.569Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 72,
               "Title": "QuizEvaluationRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\QuizEvaluationRepo\\QuizEvaluationRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\QuizEvaluationRepo\\QuizEvaluationRepository.cs",
@@ -1308,12 +1256,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\QuizEvaluationRepo\\QuizEvaluationRepository.cs",
               "ViewState": "AQIAADsAAAAAAAAAAIBZwFAAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T18:48:41.775Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T18:48:41.775Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 90,
               "Title": "QuizEvaluationNoteDto.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\DTOs\\QuizEvaluationNoteDto.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\DTOs\\QuizEvaluationNoteDto.cs",
@@ -1321,12 +1268,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\DTOs\\QuizEvaluationNoteDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T18:39:18.534Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-09T18:39:18.534Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 73,
               "Title": "QuizEvaluationDto.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\DTOs\\QuizEvaluationDto.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\DTOs\\QuizEvaluationDto.cs",
@@ -1334,12 +1280,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\DTOs\\QuizEvaluationDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T18:46:03.699Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T18:46:03.699Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 74,
               "Title": "QuestionOptionController.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Controllers\\QuestionOptionController.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Controllers\\QuestionOptionController.cs",
@@ -1347,12 +1292,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Controllers\\QuestionOptionController.cs",
               "ViewState": "AQIAAFsAAAAAAAAAAAAmwHsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T18:09:36.79Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T18:09:36.79Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 75,
               "Title": "ProfileJobController.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Controllers\\ProfileJobController.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Controllers\\ProfileJobController.cs",
@@ -1360,12 +1304,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Controllers\\ProfileJobController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAFsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T17:30:29.747Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T17:30:29.747Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 76,
               "Title": "QuizRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\QuizRepo\\QuizRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\QuizRepo\\QuizRepository.cs",
@@ -1373,12 +1316,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\QuizRepo\\QuizRepository.cs",
               "ViewState": "AQIAAEUAAAAAAAAAAAAmwFkAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T11:01:22.64Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-12T11:01:22.64Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 77,
               "Title": "QuestionOptionDto.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\DTOs\\QuestionOptionDto.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\DTOs\\QuestionOptionDto.cs",
@@ -1386,12 +1328,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\DTOs\\QuestionOptionDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAUAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T18:07:31.408Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T18:07:31.408Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 78,
               "Title": "ContractTypeRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\ContraTypeRepo\\ContractTypeRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\ContraTypeRepo\\ContractTypeRepository.cs",
@@ -1399,12 +1340,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\ContraTypeRepo\\ContractTypeRepository.cs",
               "ViewState": "AQIAADEAAAAAAAAAAAAmwDwAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T09:58:49.589Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T09:58:49.589Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 81,
               "Title": "ProfileJobRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\ProfileJobRepo\\ProfileJobRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\ProfileJobRepo\\ProfileJobRepository.cs",
@@ -1412,12 +1352,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\ProfileJobRepo\\ProfileJobRepository.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAxwBMAAABVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T17:35:16.242Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T17:35:16.242Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 79,
               "Title": "SkillRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\SkillRepo\\SkillRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\SkillRepo\\SkillRepository.cs",
@@ -1425,12 +1364,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\SkillRepo\\SkillRepository.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAQwBEAAABQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T10:24:59.203Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-08T10:24:59.203Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 80,
               "Title": "QuestionOptionRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\QuestionOptionRepo\\QuestionOptionRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\QuestionOptionRepo\\QuestionOptionRepository.cs",
@@ -1438,12 +1376,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\QuestionOptionRepo\\QuestionOptionRepository.cs",
               "ViewState": "AQIAAC4AAAAAAAAAAAAiwDoAAABbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T18:08:57.894Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T18:08:57.894Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 82,
               "Title": "EducationRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\EducationRepo\\EducationRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\EducationRepo\\EducationRepository.cs",
@@ -1451,12 +1388,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\EducationRepo\\EducationRepository.cs",
               "ViewState": "AQIAACEAAAAAAAAAAAAowCsAAABiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T13:07:29.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-22T13:07:29.35Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 83,
               "Title": "229A0884.jpg - Bitmap [3240x2160, 24 bit, JPG]",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\UploadedImages\\229A0884.jpg",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\UploadedImages\\229A0884.jpg",
@@ -1468,7 +1404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 84,
               "Title": "ContractTypeDto.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\DTOs\\ContractTypeDto.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\DTOs\\ContractTypeDto.cs",
@@ -1476,12 +1412,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\DTOs\\ContractTypeDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T13:03:49.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T13:03:49.595Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 85,
               "Title": "QualiPro-Recruitment-Web-Api.csproj",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj",
@@ -1489,12 +1424,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj",
               "ViewState": "AQIAAAoAAAAAAAAAAEBVwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-14T10:44:47.192Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-14T10:44:47.192Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 86,
               "Title": "ProfileJobDto.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\DTOs\\ProfileJobDto.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\DTOs\\ProfileJobDto.cs",
@@ -1502,12 +1436,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\DTOs\\ProfileJobDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T17:29:32.298Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T17:29:32.298Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 87,
               "Title": "NewTabContractType.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\Models\\NewTabContractType.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Data\\Models\\NewTabContractType.cs",
@@ -1515,12 +1448,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Data\\Models\\NewTabContractType.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T18:13:51.192Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-13T18:13:51.192Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 88,
               "Title": "ModuleRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Repositories\\ModuleRepo\\ModuleRepository.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Repositories\\ModuleRepo\\ModuleRepository.cs",
@@ -1528,12 +1460,11 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Repositories\\ModuleRepo\\ModuleRepository.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAxwEAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T20:14:15.938Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-17T20:14:15.938Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 89,
               "Title": "RoleController.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\Controllers\\RoleController.cs",
               "RelativeDocumentMoniker": "QualiPro-Recruitment-Web-Api\\Controllers\\RoleController.cs",
@@ -1541,8 +1472,7 @@
               "RelativeToolTip": "QualiPro-Recruitment-Web-Api\\Controllers\\RoleController.cs",
               "ViewState": "AQIAACEAAAAAAAAAAAAkwDAAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T10:40:59.555Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-17T10:40:59.555Z"
             }
           ]
         }
