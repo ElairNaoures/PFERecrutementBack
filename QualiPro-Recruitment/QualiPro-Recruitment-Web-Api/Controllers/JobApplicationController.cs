@@ -29,7 +29,7 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
 
         public JobApplicationController(IJobApplicationRepository jobApplicationRepository, EmailService emailService,
             INotificationRepository notificationRepository,
-            IUserRepository userRepository, IJobRepository jobRepository, ILogger<JobApplicationController> logger // Ajouter le paramètre ILogger
+            IUserRepository userRepository, IJobRepository jobRepository, ILogger<JobApplicationController> logger 
 )
         {
             _jobApplicationRepository = jobApplicationRepository;
@@ -128,7 +128,8 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
                 {
                     UserId = user.Id,
                     CondidatId = createdJobApplication.CondidatId ?? 0,
-                    Message = $"A new candidate has applied for the job: {job.Title}.",
+                    Message = $"nouvelle condidat postuler pour cet emploi: {job.Title}.",
+                    
                     CreatedAt = DateTime.UtcNow,
                     IsRead = false
                 };

@@ -111,24 +111,54 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.UserRepo
                                  .FirstOrDefaultAsync();
         }
 
+        //public async Task UpdateUser(UserDTO userDTO)
+        //{
+        //    var user = await _qualiProContext.TabUsers.FindAsync(userDTO.Id);
+        //    if (user == null)
+        //    {
+        //        return;
+        //    }
+        //    user.FirstName = userDTO.FirstName;
+        //    user.LastName = userDTO.LastName;
+        //    user.Country = userDTO.Country;
+        //    user.PhoneNumber = userDTO.PhoneNumber;
+        //    user.Birthdate = userDTO.Birthdate;
+        //    user.RoleId = userDTO.RoleId;
+
+        //    if (!string.IsNullOrEmpty(userDTO.ImageFileName))
+        //    {
+        //        user.ImageFileName = SaveFile(_imageFolderPath, userDTO.ImageFileName);
+        //    }
+        //    _qualiProContext.TabUsers.Update(user);
+        //    await _qualiProContext.SaveChangesAsync();
+        //}
         public async Task UpdateUser(UserDTO userDTO)
         {
             var user = await _qualiProContext.TabUsers.FindAsync(userDTO.Id);
             if (user == null)
             {
-                return;
+                throw new Exception("User not found");
             }
+
+            // Mise à jour des autres attributs
             user.FirstName = userDTO.FirstName;
             user.LastName = userDTO.LastName;
             user.Country = userDTO.Country;
             user.PhoneNumber = userDTO.PhoneNumber;
             user.Birthdate = userDTO.Birthdate;
-            user.RoleId = userDTO.RoleId;
 
+            // Ne mettre à jour le RoleId que s'il est défini dans le DTO
+            if (userDTO.RoleId.HasValue)
+            {
+                user.RoleId = userDTO.RoleId.Value;
+            }
+
+            // Gestion de l'image si nécessaire
             if (!string.IsNullOrEmpty(userDTO.ImageFileName))
             {
                 user.ImageFileName = SaveFile(_imageFolderPath, userDTO.ImageFileName);
             }
+
             _qualiProContext.TabUsers.Update(user);
             await _qualiProContext.SaveChangesAsync();
         }
@@ -140,8 +170,9 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.UserRepo
             if (user == null)
             {
                 return false;
-                user.Deleted = true;
+        
             }
+            user.Deleted = true;
             await _qualiProContext.SaveChangesAsync();
             return true;
         }

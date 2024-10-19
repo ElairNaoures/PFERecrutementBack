@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tPL2ltNdFYpnnsQUS5Yp9/6swRa7FaNRUkpecKHxLa+AitBZGoYhyZifZBMuuDhHTmidfo0ojVosVXtcgC2RsA==",
+  "dgSpecHash": "8sVy6bCMIH82138L0+19KPr8vR5R+/2shGpaqECEnoj0boguAomJj1bmU3zJFW8cQKHnB5uADH+RC6IHOgiakg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\QualiPro-Recruitment-Data.csproj",
+  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\back\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\QualiPro-Recruitment-Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

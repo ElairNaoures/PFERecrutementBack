@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj": {}
+    "C:\\Users\\LENOVO\\Desktop\\back\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\QualiPro-Recruitment-Data.csproj": {
+    "C:\\Users\\LENOVO\\Desktop\\back\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\QualiPro-Recruitment-Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\QualiPro-Recruitment-Data.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\back\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\QualiPro-Recruitment-Data.csproj",
         "projectName": "QualiPro-Recruitment-Data",
-        "projectPath": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\QualiPro-Recruitment-Data.csproj",
+        "projectPath": "C:\\Users\\LENOVO\\Desktop\\back\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\QualiPro-Recruitment-Data.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\obj\\",
+        "outputPath": "C:\\Users\\LENOVO\\Desktop\\back\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -102,14 +102,14 @@
         }
       }
     },
-    "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj": {
+    "C:\\Users\\LENOVO\\Desktop\\back\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\back\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj",
         "projectName": "QualiPro-Recruitment-Web-Api",
-        "projectPath": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj",
+        "projectPath": "C:\\Users\\LENOVO\\Desktop\\back\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\obj\\",
+        "outputPath": "C:\\Users\\LENOVO\\Desktop\\back\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -126,8 +126,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\QualiPro-Recruitment-Data.csproj": {
-                "projectPath": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\QualiPro-Recruitment-Data.csproj"
+              "C:\\Users\\LENOVO\\Desktop\\back\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\QualiPro-Recruitment-Data.csproj": {
+                "projectPath": "C:\\Users\\LENOVO\\Desktop\\back\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Data\\QualiPro-Recruitment-Data.csproj"
               }
             }
           }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uJC5INyc0syC8INPjDy1lYYtCtV+WIGVwofckO+jqZ3MngDL2/2ay8KCkfayfu8DwJkA43h5XIS57ihIbA2T4Q==",
+  "dgSpecHash": "x1IekbKZrzTiWbyUr9KZmKAfPmNr9nWvAlUu3jKvnRfCOjsd+Hw1pWoGa+3AZk5kGJ9r26xbHZ0WaI4Kn4ZFWw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\ProjectPfe\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj",
+  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\back\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\QualiPro-Recruitment-Web-Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

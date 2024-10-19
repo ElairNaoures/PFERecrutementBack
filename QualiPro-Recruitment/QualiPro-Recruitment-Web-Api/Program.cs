@@ -107,13 +107,13 @@ app.UseCors(policy =>
 });
 app.UseStaticFiles(new StaticFileOptions
 {
-    FileProvider = new PhysicalFileProvider(@"C:\Users\LENOVO\Desktop\PfERecrutement\PFERecrutementBack\QualiPro-Recruitment\QualiPro-Recruitment-Web-Api\UploadedImages"),
+    FileProvider = new PhysicalFileProvider(@"C:\Users\LENOVO\Desktop\back\PFERecrutementBack\QualiPro-Recruitment\QualiPro-Recruitment-Web-Api\UploadedImages"),
     RequestPath = "/UploadedImages"
 });
 
 app.UseStaticFiles(new StaticFileOptions
 {
-    FileProvider = new PhysicalFileProvider(@"C:\Users\LENOVO\Desktop\PfERecrutement\PFERecrutementBack\QualiPro-Recruitment\QualiPro-Recruitment-Web-Api\UploadedCVs"),
+    FileProvider = new PhysicalFileProvider(@"C:\Users\LENOVO\Desktop\back\PFERecrutementBack\QualiPro-Recruitment\QualiPro-Recruitment-Web-Api\UploadedCVs"),
     RequestPath = "/UploadedCVs"
 });
 
