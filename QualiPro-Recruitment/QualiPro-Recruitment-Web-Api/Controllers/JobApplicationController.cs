@@ -52,7 +52,7 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
                 JobId = ja.JobId,
                 MeetingDate = ja.MeetingDate,
                 HeadToHeadInterviewNote = ja.HeadToHeadInterviewNote,
-                Score = ja.Score // Assurez-vous que Score est correctement assigné
+                Score = ja.Score 
             });
             return Ok(jobApplicationDtos);
         }
@@ -71,7 +71,7 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
                 JobId = jobApplication.JobId,
                 MeetingDate = jobApplication.MeetingDate,
                 HeadToHeadInterviewNote = jobApplication.HeadToHeadInterviewNote,
-                Score = jobApplication.Score // Assurez-vous que Score est correctement assigné
+                Score = jobApplication.Score 
             };
 
             return Ok(jobApplicationDto);
@@ -414,14 +414,39 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
             return Ok(jobs);
         }
 
-        [HttpGet("candidates-with-score-above-threshold")]
-        public async Task<ActionResult<IEnumerable<object>>> GetCandidatesWithScoreAboveThreshold()
+        //[HttpGet("candidates-with-score-above-threshold")]
+        //public async Task<ActionResult<IEnumerable<object>>> GetCandidatesWithScoreAboveThreshold()
+        //{
+        //    const int scoreThreshold = 12; // Score threshold
+
+        //    var jobApplications = await _jobApplicationRepository.GetCandidatesWithScoreAboveThreshold();
+
+        //    var candidatesAboveThreshold = jobApplications
+        //        .Where(ja => ja.Score >= scoreThreshold
+        //                     && (!ja.Deleted.HasValue || !ja.Deleted.Value)
+        //                     && (ja.Condidat == null || !ja.Condidat.Deleted.HasValue || !ja.Condidat.Deleted.Value))
+        //        .GroupBy(ja => ja.Job != null ? ja.Job.Title : "Unknown") // Group by job title
+        //        .Select(g => new
+        //        {
+        //            JobTitle = g.Key,
+        //            Candidates = g.Select(ja => new
+        //            {
+        //                CandidateName = ja.Condidat != null ? ja.Condidat.FirstName : "Unknown",
+        //                Score = ja.Score
+        //            }).ToList()
+        //        })
+        //        .ToList();
+
+        //    return Ok(candidatesAboveThreshold);
+        //}
+        [HttpGet("candidates-with-highest-score")]
+        public async Task<ActionResult<IEnumerable<object>>> GetCandidatesWithHighestScore()
         {
             const int scoreThreshold = 12; // Score threshold
 
             var jobApplications = await _jobApplicationRepository.GetCandidatesWithScoreAboveThreshold();
 
-            var candidatesAboveThreshold = jobApplications
+            var candidatesWithHighestScore = jobApplications
                 .Where(ja => ja.Score >= scoreThreshold
                              && (!ja.Deleted.HasValue || !ja.Deleted.Value)
                              && (ja.Condidat == null || !ja.Condidat.Deleted.HasValue || !ja.Condidat.Deleted.Value))
@@ -429,16 +454,20 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
                 .Select(g => new
                 {
                     JobTitle = g.Key,
-                    Candidates = g.Select(ja => new
-                    {
-                        CandidateName = ja.Condidat != null ? ja.Condidat.FirstName : "Unknown",
-                        Score = ja.Score
-                    }).ToList()
+                    BestCandidate = g
+                        .OrderByDescending(ja => ja.Score) // Order by score descending
+                        .Select(ja => new
+                        {
+                            CandidateName = ja.Condidat != null ? ja.Condidat.FirstName : "Unknown",
+                            Score = ja.Score
+                        })
+                        .FirstOrDefault() // Select the top candidate (highest score)
                 })
                 .ToList();
 
-            return Ok(candidatesAboveThreshold);
+            return Ok(candidatesWithHighestScore);
         }
+
 
 
         [HttpGet("job/{jobId}")]

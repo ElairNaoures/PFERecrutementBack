@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using QualiPro_Recruitment_Web_Api.Repositories.CondidatRepo;
 using QualiPro_Recruitment_Data.Data;
 using QualiPro_Recruitment_Data.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace QualiPro_Recruitment_Web_Api.Repositories
 {
@@ -20,9 +21,10 @@ namespace QualiPro_Recruitment_Web_Api.Repositories
         public CondidatRepository(QualiProContext qualiProContext)
         {
             _qualiProContext = qualiProContext;
-            _cvFolderPath = "C:\\Users\\LENOVO\\Desktop\\PfERecrutement\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\UploadedCVs";
-            _imageFolderPath = "C:\\Users\\LENOVO\\Desktop\\PfERecrutement\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\UploadedImages";
+            _cvFolderPath = "C:\\Users\\LENOVO\\Desktop\\back\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\UploadedCVs";
+            _imageFolderPath = "C:\\Users\\LENOVO\\Desktop\\back\\PFERecrutementBack\\QualiPro-Recruitment\\QualiPro-Recruitment-Web-Api\\UploadedImages";
         }
+        
 
         //public async Task<IEnumerable<CondidatDto>> GetAllCondidatsAsync()
         //{
@@ -194,6 +196,19 @@ namespace QualiPro_Recruitment_Web_Api.Repositories
             // Here you can add code to actually move the file to the desired folder
             return fileName;
         }
+        public string GetCVFilePath(string fileName)
+        {
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "UploadedCVs", fileName);
+
+            if (!System.IO.File.Exists(filePath))
+            {
+                return null;
+            }
+
+            return filePath;
+        }
+
+
 
     }
 }

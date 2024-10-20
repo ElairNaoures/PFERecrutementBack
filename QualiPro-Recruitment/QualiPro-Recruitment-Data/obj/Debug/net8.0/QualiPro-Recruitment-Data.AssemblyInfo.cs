@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QualiPro-Recruitment-Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9c44e2330839d60f22ad64304bb9af1c0e0d22c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a862bea527fcb79fdd38a8b602af29312e20e069")]
 [assembly: System.Reflection.AssemblyProductAttribute("QualiPro-Recruitment-Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QualiPro-Recruitment-Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

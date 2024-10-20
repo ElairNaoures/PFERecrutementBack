@@ -416,6 +416,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.CondidatController",
+    "Method": "DownloadCV",
+    "RelativePath": "api/Condidat/DownloadCV/{fileName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.ContractTypeController",
     "Method": "AddContract",
     "RelativePath": "api/ContractType",
@@ -843,8 +859,8 @@
   },
   {
     "ContainingType": "QualiPro_Recruitment_Web_Api.Controllers.JobApplicationController",
-    "Method": "GetCandidatesWithScoreAboveThreshold",
-    "RelativePath": "api/JobApplication/candidates-with-score-above-threshold",
+    "Method": "GetCandidatesWithHighestScore",
+    "RelativePath": "api/JobApplication/candidates-with-highest-score",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

@@ -103,6 +103,36 @@ namespace QualiPro_Recruitment_Web_Api.Controllers
             await _condidatRepository.DeleteCondidatAsync(id);
             return NoContent();
         }
+        //[HttpGet("DownloadCV/{fileName}")]
+        //public IActionResult DownloadCV(string fileName)
+        //{
+        //    // Le chemin absolu où les fichiers sont stockés
+        //    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "UploadedCVs", fileName);
+
+        //    // Vérifiez si le fichier existe
+        //    if (!System.IO.File.Exists(filePath))
+        //    {
+        //        return NotFound(new { message = "File not found." });
+        //    }
+
+        //    // Renvoyez le fichier avec le type MIME correct
+        //    var mimeType = "application/pdf";
+        //    return PhysicalFile(filePath, mimeType, fileName);
+        //}
+
+        [HttpGet("DownloadCV/{fileName}")]
+        public IActionResult DownloadCV(string fileName)
+        {
+            var filePath = Path.Combine("UploadedCVs", fileName); // Assurez-vous que ce chemin est correct
+
+            if (!System.IO.File.Exists(filePath))
+            {
+                return NotFound(); // Si le fichier n'existe pas
+            }
+
+            var fileBytes = System.IO.File.ReadAllBytes(filePath);
+            return File(fileBytes, "application/pdf", fileName);
+        }
 
 
     }

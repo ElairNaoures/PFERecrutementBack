@@ -111,7 +111,7 @@ app.UseStaticFiles(new StaticFileOptions
     RequestPath = "/UploadedImages"
 });
 
-app.UseStaticFiles(new StaticFileOptions
+app.UseStaticFiles(new StaticFileOptions      
 {
     FileProvider = new PhysicalFileProvider(@"C:\Users\LENOVO\Desktop\back\PFERecrutementBack\QualiPro-Recruitment\QualiPro-Recruitment-Web-Api\UploadedCVs"),
     RequestPath = "/UploadedCVs"

@@ -13,6 +13,7 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.CondidatRepo
         Task UpdateCondidatAsync(CondidatDto condidatDto);
 
         Task<bool> DeleteCondidatAsync(int id);
+        string GetCVFilePath(string fileName);
 
     }
 }

@@ -112,8 +112,20 @@ namespace QualiPro_Recruitment_Web_Api.Repositories.JobApplicationRepo
         }
 
 
-      
 
+
+
+        //public async Task<IEnumerable<TabJobApplication>> GetCandidatesWithScoreAboveThreshold()
+        //{
+        //    return await _qualiProContext.TabJobApplications
+        //        .Include(ja => ja.Job)
+        //        .Include(ja => ja.Condidat)
+        //        .Where(ja => ja.Score >= 12 // Filtrer les candidats avec un score >= 12
+        //                  && (ja.Deleted == false || ja.Deleted == null) // Filtrer les candidatures non supprimées
+        //                  && (ja.Job.Deleted == false || ja.Job.Deleted == null) // Filtrer les jobs non supprimés
+        //                  && (ja.Condidat == null || ja.Condidat.Deleted == false || ja.Condidat.Deleted == null)) // Filtrer les candidats non supprimés
+        //        .ToListAsync();
+        //}
 
         public async Task<IEnumerable<TabJobApplication>> GetCandidatesWithScoreAboveThreshold()
         {
